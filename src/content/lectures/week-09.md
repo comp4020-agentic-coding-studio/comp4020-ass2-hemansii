@@ -1,0 +1,51 @@
+---
+title: What Arrival gets wrong
+description:
+  The film makes a strong claim about language and thought. The evidence
+  supports a much weaker one, and the weaker one is more interesting
+week: 9
+date: 2027-04-19
+teachers:
+  - marisol-quaye
+screening:
+  title: Arrival
+  year: 2016
+subsystem: semantics
+related:
+  - lectures/week-08
+  - sessions/09-what-words-do-to-thought
+---
+
+*Arrival* is adapted from Ted Chiang's "Story of Your Life", and it makes its
+central claim explicitly: learning Heptapod B restructures Louise's cognition
+until she perceives time non-linearly. Language determines thought, totally and
+irreversibly. This is linguistic determinism, the strong form of what usually
+gets called the Sapir–Whorf hypothesis, and essentially nobody in the field
+believes it.
+
+Worth being precise about what Whorf actually wrote, because the position
+attached to his name is largely an invention of his critics and popularisers.
+And worth being precise about what the strong claim would require: if your
+language genuinely determined what you could think, translation would be
+impossible and learning a second language could not change anything, since you
+would have no way to think the new thoughts in order to acquire them.
+
+The weak version is a different proposition, and it has survived contact with
+experiment. Speakers of languages that carve the blue-green region differently
+discriminate those colours measurably faster at their own category boundary.
+Guugu Yimithirr speakers, whose language uses absolute compass directions rather
+than left and right, maintain an accurate sense of orientation that speakers of
+languages like English generally do not. Grammatical gender nudges the
+adjectives people reach for. These are real, replicated, and modest — language
+influences attention and habitual categorisation rather than determining the
+limits of thought.
+
+That is your essay. Take the film seriously enough to disagree with it
+precisely.
+
+## Outline
+
+- the claim the film makes, where it makes it, and stated without caricature
+- Whorf, what he wrote, and what got attached to his name afterwards
+- the effects that replicate — colour boundaries, spatial frames, gender
+- how to disagree with a work of art without treating it as a failed paper
