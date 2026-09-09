@@ -6,15 +6,16 @@ import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
 
-// STARTER_CONTENT: replace the hero artwork and its alt text below, then
-// remove this comment.
+// The hero is generated, not drawn — see scripts/make-artwork.mjs. Every glyph
+// in it is assembled from a stem, a bow and a mark, which is the featural
+// principle the course teaches in week 8.
 ---
 
 <ContentLayout
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
   heroImage={heroImage}
-  heroImageAlt="A lecture theatre reduced to flat gold and black shapes, rows of seats sweeping past the frame, in a two-ink risograph print"
+  heroImageAlt="Five lines of writing in an invented script, printed in two inks on warm cream. Each letter is a black vertical stem with a bow curving off one side, and a small gold vowel mark sits above it, slightly out of register in the way a risograph misprints"
   {...siteConfig}
 >
   <ul class="course-tags" aria-label="Course tags">
