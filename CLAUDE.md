@@ -58,6 +58,14 @@ asides about how niche this is, no exclamation marks.
 - Prefer the specific over the summarising: "bring a printed IPA chart" beats
   "come prepared."
 
+### Quote any frontmatter value containing a colon
+
+`title: Star Trek VI: The Undiscovered Country` is not valid YAML — the parser
+reads the second colon as a mapping and the build fails with "a colon is
+missed." Film titles and subtitled descriptions hit this constantly, so quote
+the value: `title: "Star Trek VI: The Undiscovered Country"`. In a description,
+prefer an em dash over a colon.
+
 ### Links and the base path
 
 Never write a root-absolute `href="/…"` in an `.astro` file. It skips Astro's
