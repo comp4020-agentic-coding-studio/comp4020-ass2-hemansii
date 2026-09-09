@@ -39,24 +39,24 @@ export const slopCourseMetaSchema = z
   });
 
 // The single source of truth for the course record. The generated homepage,
-// navigation label and /api/index.json all read this object.
-// Replace every placeholder value, but keep the shape: the catalogue ingests
-// this API contract when the course is published.
+// navigation label and /api/index.json all read this object, so nothing here
+// should be restated in page content.
 //
-// The code's last three digits were assigned to this repo when it was
-// provisioned, and no other course in the cohort has them. Change the first
-// digit to your course's level (and `level` to match); keep the other three.
-// STARTER_CONTENT: replace this course record, then remove this comment.
+// startDate is the week 1 Monday and endDate is the last submission deadline;
+// spec/data-integrity.test.ts holds every dated lecture, workshop and
+// assessment inside that window.
 export const courseMeta = slopCourseMetaSchema.parse({
   code: "SLOP4022",
-  title: "Course Title Goes Here",
+  title: "Nobody Speaks This Yet",
   session: "Semester 1",
   year: 2027,
   level: 4,
   startDate: "2027-02-22",
   endDate: "2027-05-28",
   description:
-    "One concise paragraph explaining what this course is, who it is for, " +
-    "and why somebody would choose to spend a semester taking it.",
-  tags: ["replace me"],
+    "Twelve weeks, eleven compulsory screenings, and one invented language " +
+    "built a subsystem at a time: sounds, then grammar, then writing, then " +
+    "meaning. In week twelve you read a text aloud in a language that did " +
+    "not exist in February.",
+  tags: ["conlang", "linguistics", "screen fiction"],
 }) satisfies CourseMetaInput;
