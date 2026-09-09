@@ -1,0 +1,58 @@
+---
+// The compulsory screening for a teaching week.
+//
+// `screening` rides the lecture schema's passthrough rather than being declared
+// in `src/content.config.ts`, so it arrives untyped from the generated content
+// types and is narrowed here. A lecture with no screening — week 12, the crit —
+// renders nothing at all.
+interface Screening {
+  title: string;
+  year: number;
+}
+
+interface Props {
+  screening?: unknown;
+}
+
+const { screening } = Astro.props;
+
+const isScreening = (value: unknown): value is Screening =>
+  typeof value === "object" &&
+  value !== null &&
+  typeof (value as Screening).title === "string" &&
+  typeof (value as Screening).year === "number";
+
+const film = isScreening(screening) ? screening : null;
+---
+
+{
+  film && (
+    <aside class="screening" aria-labelledby="screening-heading">
+      <h2 id="screening-heading">Screening — compulsory</h2>
+      <p>
+        <cite>{film.title}</cite> ({film.year})
+      </p>
+    </aside>
+  )
+}
+
+<style>
+  /* Inherits the brand palette rather than introducing colour of its own. */
+  .screening {
+    border-inline-start: 3px solid currentColor;
+    padding-inline-start: 1rem;
+    margin-block: 1.5rem;
+  }
+
+  .screening h2 {
+    margin-block: 0 0.15rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .screening p {
+    margin-block: 0;
+    font-size: 1.15rem;
+  }
+</style>
