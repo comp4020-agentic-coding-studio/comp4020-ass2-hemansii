@@ -1,17 +1,24 @@
 ---
 title: Idris Fenn
 description:
-  A tutor working across the course's first reviews and the practical work that
-  follows them.
+  A tutor who runs the Thursday workshops, and the person most likely to ask
+  you to pronounce something you have written down and hoped nobody would.
 affiliation: Slop University School of Invented Disciplines
 role: tutor
 email: idris.fenn@slop.university
-contact: Ask during sessions, or email when a question cannot wait until the next one.
-photo: ./idris-fenn.avif
-photoAlt: A stylised portrait of a person facing the viewer, flat gold and black shapes on warm cream, in a two-ink risograph print
+contact: Ask in the workshop. Email only for things that cannot wait until Thursday.
 ---
 
-<!-- STARTER_CONTENT: replace this person entry, then remove this comment. -->
+Idris runs the workshops, which means they do most of the actual teaching on
+this course.
 
-Replace this entry. A second person makes the listing, role ordering and
-teacher-reference fields visible before you replace the cast with your own.
+Their background is in subtitling and translation for film, a job that consists
+almost entirely of discovering that two languages do not divide the world the
+same way and having ninety minutes and a character limit to do something about
+it. Weeks seven and eleven are theirs in spirit even when Marisol is lecturing.
+
+They are responsible for the practice of asking, without notice, that you
+produce any phoneme on your own inventory. This is not showmanship. Roughly half
+of every cohort has written down a sound they cannot actually make, and finding
+that out in week two costs you an afternoon while finding it out in week twelve
+costs you the crit.

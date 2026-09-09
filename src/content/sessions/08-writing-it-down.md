@@ -7,6 +7,7 @@ week: 8
 date: 2027-04-15
 teachers:
   - idris-fenn
+  - wren-halloran
 spec:
   - your script covers every phoneme, or you can state the principled reason it does not
   - you have written the same sentence three times by hand, quickly

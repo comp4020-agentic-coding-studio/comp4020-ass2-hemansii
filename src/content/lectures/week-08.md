@@ -7,6 +7,7 @@ week: 8
 date: 2027-04-12
 teachers:
   - marisol-quaye
+  - wren-halloran
 screening:
   title: "The Lord of the Rings: The Return of the King"
   year: 2003

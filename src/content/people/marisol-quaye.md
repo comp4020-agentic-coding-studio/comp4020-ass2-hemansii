@@ -1,21 +1,24 @@
 ---
 title: Marisol Quaye
 description:
-  The founding convenor, responsible for the course's shape and its weekly
-  teaching programme.
+  A phonetician who spent eleven years documenting languages with very few
+  remaining speakers, and now teaches people to build ones that have none.
 affiliation: Slop University School of Invented Disciplines
 role: convenor
 email: marisol.quaye@slop.university
-contact: Email for course-level questions; use the weekly session for feedback on work.
-photo: ./marisol-quaye.avif
-photoAlt: A stylised portrait of a person in three-quarter view, flat gold and black shapes on warm cream, in a two-ink risograph print
+contact: Email for anything about the course as a whole. Anything about your language is better asked in the workshop, out loud, with the thing in front of us.
 ---
 
-<!-- STARTER_CONTENT: replace this person entry, then remove this comment. -->
+Marisol convenes the course and gives the Monday lectures.
 
-Replace this entry. A people page carries a short bio and whatever a student
-needs in order to contact the right person for the right thing --- and nothing
-that will be stale by week 3.
+She came to constructed languages sideways, after eleven years of documentary
+fieldwork on languages with a handful of speakers left — work that involves
+sitting with people, recording carefully, and being wrong in public about what
+you heard. That is where the shape of this course comes from. She is
+unsentimental about the fact that a documented language and an invented one are
+not the same kind of object, and insistent that the discipline of describing one
+is the right training for building the other.
 
-Consultation hours, contact preferences and the escalation path (who to ask
-first, who to ask when that does not work) are the parts students actually read.
+Her standing position, which you will hear in week two and again in week twelve,
+is that a language you cannot say out loud is a notation, not a language. The
+crit is designed around that view, and she is happy to argue about it.
