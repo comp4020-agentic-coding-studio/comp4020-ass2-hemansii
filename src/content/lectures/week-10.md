@@ -11,6 +11,9 @@ screening:
   title: The 13th Warrior
   year: 1999
 subsystem: acquisition
+requires:
+  - lectures/week-04
+  - lectures/week-08
 related:
   - lectures/week-09
   - sessions/10-teaching-it-to-someone

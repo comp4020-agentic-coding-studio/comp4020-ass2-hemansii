@@ -11,6 +11,8 @@ screening:
   title: "Game of Thrones, season 1"
   year: 2011
 subsystem: syntax
+requires:
+  - lectures/week-03
 related:
   - lectures/week-03
   - sessions/04-ordering-the-sentence

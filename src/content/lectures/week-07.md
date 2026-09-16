@@ -11,6 +11,9 @@ screening:
   title: Blade Runner
   year: 1982
 subsystem: sociolinguistics
+requires:
+  - lectures/week-02
+  - lectures/week-06
 related:
   - lectures/week-06
   - sessions/07-who-speaks-it-badly

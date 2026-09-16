@@ -11,6 +11,9 @@ screening:
   title: Arrival
   year: 2016
 subsystem: semantics
+requires:
+  - lectures/week-01
+  - lectures/week-06
 related:
   - lectures/week-08
   - sessions/09-what-words-do-to-thought

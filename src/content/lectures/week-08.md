@@ -12,6 +12,9 @@ screening:
   title: "The Lord of the Rings: The Return of the King"
   year: 2003
 subsystem: orthography
+requires:
+  - lectures/week-02
+  - lectures/week-05
 related:
   - lectures/week-07
   - sessions/08-writing-it-down

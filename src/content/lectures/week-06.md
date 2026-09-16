@@ -11,6 +11,10 @@ screening:
   title: Dune
   year: 2021
 subsystem: lexicon
+requires:
+  - lectures/week-02
+  - lectures/week-03
+  - lectures/week-05
 related:
   - lectures/week-05
   - sessions/06-the-first-hundred-words

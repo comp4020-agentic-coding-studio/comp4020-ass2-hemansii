@@ -11,6 +11,8 @@ screening:
   title: Arrival
   year: 2016
 subsystem: phonology
+requires:
+  - lectures/week-01
 related:
   - lectures/week-01
   - sessions/02-choosing-your-sounds

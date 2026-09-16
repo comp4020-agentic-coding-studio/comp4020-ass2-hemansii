@@ -11,6 +11,8 @@ screening:
   title: "Star Trek VI: The Undiscovered Country"
   year: 1991
 subsystem: morphology
+requires:
+  - lectures/week-02
 related:
   - lectures/week-02
   - sessions/03-building-words

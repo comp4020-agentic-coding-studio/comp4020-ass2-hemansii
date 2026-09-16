@@ -11,6 +11,9 @@ screening:
   title: 'Star Trek: The Next Generation — "Darmok"'
   year: 1991
 subsystem: pragmatics
+requires:
+  - lectures/week-07
+  - lectures/week-09
 related:
   - lectures/week-10
   - sessions/11-what-goes-without-saying

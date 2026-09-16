@@ -8,6 +8,10 @@ date: 2027-05-10
 teachers:
   - marisol-quaye
   - idris-fenn
+requires:
+  - lectures/week-08
+  - lectures/week-10
+  - lectures/week-11
 related:
   - lectures/week-11
   - sessions/12-the-crit

@@ -11,6 +11,8 @@ screening:
   title: Avatar
   year: 2009
 subsystem: phonotactics
+requires:
+  - lectures/week-02
 related:
   - lectures/week-04
   - sessions/05-what-your-actors-can-say
