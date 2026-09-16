@@ -7,11 +7,12 @@ screenings, one linguistic subsystem added per week, then a crit in week 12
 where students read a text aloud in a language that did not exist in February.
 
 The order is the argument: phonology (wk 2) → morphology (3) → syntax (4) →
-phonotactics (5) → borrowing (6) → contact (7) → orthography (8) → semantics (9)
-→ acquisition (10) → pragmatics (11). Week 6 is impossible without week 2. This
-is the one thing that makes the course a course rather than eleven film nights,
-so it is enforced mechanically in `spec/screening-contract.test.ts`, not left to
-good intentions.
+phonotactics (5) → lexicon (6) → sociolinguistics (7) → orthography (8) →
+semantics (9) → acquisition (10) → pragmatics (11). Week 6 is impossible
+without week 2. This is the one thing that makes the course a course rather
+than eleven film nights, so it is enforced mechanically in
+`spec/screening-contract.test.ts` and `spec/subsystem-chain.test.ts`, not left
+to good intentions.
 
 ## Rules
 
@@ -31,9 +32,17 @@ more interesting. Represent both accurately.
 ### One subsystem a week, and the chain must hold
 
 Every lecture in weeks 1–11 declares exactly one `subsystem`, and no two weeks
-declare the same one. Every lecture from week 2 on carries a `related:` edge to
-an earlier week's lecture. Adding a week means saying what it adds and what it
+declare the same one. Adding a week means saying what it adds and what it
 depends on — if neither is answerable, it isn't a week.
+
+What it depends on goes in `requires:`, which is the real edge and not the same
+thing as `related:`. Name the weeks the week is genuinely impossible without,
+not the one before it: week 6 requires 2, 3 and 5, because you cannot coin a
+word without sounds, shapes and a derivation rule. Three at most. The week pages
+render it as "Builds on" and invert it into "Feeds into", so a wrong edge is
+wrong on the page. `spec/subsystem-chain.test.ts` fails if every week depends
+only on its predecessor — a straight line is the thing this course says it is
+not.
 
 ### Every teaching week names its screening
 
@@ -42,6 +51,23 @@ is the crit, and it stays the crit. "Recommended viewing" is not a thing in this
 course — the assessment (Weekly Build Log, 15%) exists precisely so the
 compulsory screening is real rather than decorative. Don't soften that language
 anywhere on the site.
+
+### The example language is the course's, not the student's
+
+One worked example runs through weeks 2, 3, 4, 7, 8 and 11, defined in
+`src/lib/example-language.ts`. Its speakers have no lips, which is week 1's own
+illustration: no labial consonants, and no rounded vowels either, because
+rounding is a lip gesture. Eight consonants and five vowels, because that is
+what the script in the hero artwork can draw.
+
+Every block that shows it says whose it is. The site is second person
+everywhere else — *your* inventory, *your* word order — and a reader who thinks
+the course hands out a language has misread the whole assessment.
+
+Forms live in `example:` frontmatter, never in prose, so
+`spec/example-language.test.ts` can hold them to the inventory. Week 9 carries
+none: the *Arrival* essay asks for no conlang material, and the lecture that
+sets it up has to hold the same line.
 
 ### Voice
 
