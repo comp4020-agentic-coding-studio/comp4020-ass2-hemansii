@@ -27,6 +27,7 @@ export const siteConfig = defineSiteConfig({
   links: [
     { text: "Lectures", href: "/lectures/" },
     { text: sessionLabels.plural, href: "/sessions/" },
+    { text: "Screenings", href: "/screenings/" },
     { text: "Assessment", href: "/assessments/" },
     { text: "People", href: "/people/" },
     { text: "Policies", href: "/policies/" },
@@ -34,5 +35,5 @@ export const siteConfig = defineSiteConfig({
 
   licence: "CC-BY-NC-SA-4.0",
   socialImage: "/src/assets/images/card.png",
-  socialImageAlt: `Three lines of writing in an invented script — black stems and bows with gold vowel marks above them, slightly out of register on warm cream — over the words ${courseMeta.code} and ${courseMeta.title}`,
+  socialImageAlt: `A band of vertical bars in black and gold on warm cream, rising and falling like the waveform of a spoken sentence, over the words ${courseMeta.code} and ${courseMeta.title}`,
 });
