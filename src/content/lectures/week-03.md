@@ -11,6 +11,14 @@ screening:
   title: "Star Trek VI: The Undiscovered Country"
   year: 1991
 subsystem: morphology
+example:
+  - words: sit-an ken-e hen-la-ni
+    morphemes: person-NEG this-ACC speak-NEG-YET
+    translation: Nobody speaks this yet.
+    note:
+      Three suffixes on the verb, each keeping its shape and doing exactly one
+      job. That is the agglutinating strategy, and it is why this sentence can
+      be cut apart on the page at all.
 requires:
   - lectures/week-02
 related:

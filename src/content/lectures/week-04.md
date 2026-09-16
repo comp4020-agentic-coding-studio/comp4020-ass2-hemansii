@@ -11,6 +11,19 @@ screening:
   title: "Game of Thrones, season 1"
   year: 2011
 subsystem: syntax
+example:
+  - label: Statement
+    words: sit-an ken-e hen-la-ni
+    morphemes: person-NEG this-ACC speak-NEG-YET
+    translation: Nobody speaks this yet.
+  - label: Question
+    words: sit-an ken-e hen-la-ni ta
+    morphemes: person-NEG this-ACC speak-NEG-YET Q
+    translation: Does nobody speak this yet?
+    note:
+      Subject, then object, then verb, and the question particle last. Nothing
+      moves to ask a question — a verb-final language has no comfortable front
+      of the sentence to move anything to.
 requires:
   - lectures/week-03
 related:

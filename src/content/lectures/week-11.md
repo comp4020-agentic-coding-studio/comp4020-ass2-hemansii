@@ -11,6 +11,15 @@ screening:
   title: 'Star Trek: The Next Generation — "Darmok"'
   year: 1991
 subsystem: pragmatics
+example:
+  - words: hen-la-ni
+    morphemes: speak-NEG-YET
+    translation: Nobody speaks it yet.
+    note:
+      Everything a hearer can supply has gone. The subject is absent, not
+      implied by agreement, and the language allows this only because -ni never
+      occurs without a negative somewhere — so the absence is itself the
+      evidence that nobody is the subject.
 requires:
   - lectures/week-07
   - lectures/week-09

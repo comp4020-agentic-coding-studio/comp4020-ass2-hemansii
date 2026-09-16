@@ -11,6 +11,7 @@ screening:
   title: Arrival
   year: 2016
 subsystem: phonology
+inventory: true
 requires:
   - lectures/week-01
 related:

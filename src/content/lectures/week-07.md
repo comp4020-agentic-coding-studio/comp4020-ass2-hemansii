@@ -11,6 +11,19 @@ screening:
   title: Blade Runner
   year: 1982
 subsystem: sociolinguistics
+example:
+  - label: Careful
+    words: sit-an ken-e hen-la-ni
+    morphemes: person-NEG this-ACC speak-NEG-YET
+    translation: Nobody speaks this yet.
+  - label: Casual
+    words: sitan hen-la-n
+    morphemes: nobody speak-NEG-YET
+    translation: Nobody speaks it yet.
+    note:
+      Two things went. The object dropped, because both speakers know what it
+      is. And the boundary inside sit-an stopped being audible, which is how a
+      morpheme becomes a word nobody can take apart any more.
 requires:
   - lectures/week-02
   - lectures/week-06
