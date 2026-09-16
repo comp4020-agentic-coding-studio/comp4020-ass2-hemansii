@@ -19,7 +19,7 @@ import { sessionLabels, siteConfig } from "../site-config";
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
   heroImage={heroImage}
-  heroImageAlt="Five lines of writing in an invented script, printed in two inks on warm cream. Each letter is a black vertical stem with a bow curving off one side, and a small gold vowel mark sits above it, slightly out of register in the way a risograph misprints"
+  heroImageAlt="Five lines of writing in an invented script, printed in two inks on warm cream. Each letter is a vertical stem with a bow curving off one side, a small gold vowel mark above it and sometimes a second mark below for a final consonant. Roughly one letter in six is printed entirely in gold, and the two inks sit slightly out of register in the way a risograph misprints"
   {...siteConfig}
 >
   <ul class="course-tags" aria-label="Course tags">
@@ -88,6 +88,24 @@ import { sessionLabels, siteConfig } from "../site-config";
     </Card>
   </CardGrid>
 </ContentLayout>
+
+<style is:global>
+  .at-hero-content {
+    background: linear-gradient(
+      to top,
+      rgb(242 236 224 / 72%),
+      rgb(242 236 224 / 38%) 55%,
+      rgb(242 236 224 / 0%)
+    );
+  }
+
+  .at-hero-title {
+    color: var(--at-black, #17130f);
+    text-shadow:
+      0 1px 0 rgb(242 236 224 / 95%),
+      0 2px 20px rgb(242 236 224 / 90%);
+  }
+</style>
 
 <style>
   .hero-note {

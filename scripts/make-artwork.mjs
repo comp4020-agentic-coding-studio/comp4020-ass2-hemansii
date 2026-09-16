@@ -31,8 +31,32 @@ const mulberry32 = (a) => () => {
   return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
 };
 
-/** Lines of glyph "words", laid out like a page of writing. */
-function specimen({ width, cw, ch, top, left, lines, seed, wordMin, wordMax, wordSpace = 1.2 }) {
+/**
+ * Lines of glyph "words", laid out like a page of writing.
+ *
+ * `rubricate` is the proportion of letters printed entirely in the second ink
+ * rather than just their vowel mark — rubrication, which is what two-colour
+ * printing was invented to do. It is the difference between artwork that reads
+ * as warm and artwork that reads as grey under the hero's scrim.
+ *
+ * `codaRate` is how often a syllable closes. The script writes a coda as a mark
+ * below the stem, so this is also what keeps the texture from being uniformly
+ * top-heavy.
+ */
+function specimen({
+  width,
+  cw,
+  ch,
+  top,
+  left,
+  lines,
+  seed,
+  wordMin,
+  wordMax,
+  wordSpace = 1.2,
+  rubricate = 0,
+  codaRate = 0,
+}) {
   const rand = mulberry32(seed);
   const ink = [];
   const gold = [];
@@ -51,9 +75,15 @@ function specimen({ width, cw, ch, top, left, lines, seed, wordMin, wordMax, wor
           Math.floor(rand() * 5),
           cw,
           ch,
+          rand() < codaRate ? (rand() < 0.5 ? 1 : 3) : 0,
         );
-        ink.push(`<g transform="translate(${x} ${y})">${g.ink}</g>`);
-        if (g.gold) gold.push(`<g transform="translate(${x} ${y})">${g.gold}</g>`);
+        const at = (parts) => `<g transform="translate(${x} ${y})">${parts}</g>`;
+        if (rand() < rubricate) {
+          gold.push(at(g.ink + g.gold));
+        } else {
+          ink.push(at(g.ink));
+          if (g.gold) gold.push(at(g.gold));
+        }
         x += cw;
       }
       // A word space wide enough to read as a break rather than a wobble.
@@ -98,6 +128,8 @@ function inked({ ink, gold, strokeInk, strokeGold, dx = 5, dy = 4 }) {
     wordMin: 2,
     wordMax: 6,
     wordSpace: 1.25,
+    rubricate: 0.22,
+    codaRate: 0.3,
   });
 
   const body = inked({ ink, gold, strokeInk: 7, strokeGold: 7 });
@@ -125,6 +157,8 @@ function inked({ ink, gold, strokeInk, strokeGold, dx = 5, dy = 4 }) {
     wordMin: 2,
     wordMax: 5,
     wordSpace: 1.3,
+    rubricate: 0.22,
+    codaRate: 0.3,
   });
 
   const text = `
