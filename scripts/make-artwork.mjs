@@ -17,6 +17,8 @@
 
 import sharp from "sharp";
 
+import { glyph } from "../src/lib/glyph.mjs";
+
 const CREAM = "#f2ece0";
 const INK = "#17130f";
 const GOLD = "#b97d1c";
@@ -28,45 +30,6 @@ const mulberry32 = (a) => () => {
   t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
   return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
 };
-
-/**
- * One glyph, assembled from parts.
- * side  — which side of the stem the bow sits on
- * grade — 1 short stem, 2 full stem, 3 doubled bow, 4 barred
- * vowel — the mark above the stem, carried by the gold ink
- */
-function glyph(side, grade, vowel, cw, ch) {
-  const sx = side === "r" ? cw * 0.32 : cw * 0.68;
-  const r = cw * 0.23;
-  const cy = ch * 0.55;
-  const sweep = side === "r" ? 1 : 0;
-  const top = grade >= 2 ? ch * 0.15 : cy - r;
-  const bot = grade === 4 ? ch * 0.9 : cy + r;
-
-  const d = [
-    `M${sx} ${top} L${sx} ${bot}`,
-    `M${sx} ${cy - r} A${r} ${r} 0 0 ${sweep} ${sx} ${cy + r}`,
-  ];
-  if (grade === 3) {
-    const r2 = r * 0.52;
-    d.push(`M${sx} ${cy - r2} A${r2} ${r2} 0 0 ${sweep} ${sx} ${cy + r2}`);
-  }
-  if (grade === 4) {
-    d.push(`M${sx - r * 0.85} ${cy + r * 1.5} L${sx + r * 0.85} ${cy + r * 1.5}`);
-  }
-
-  const my = top - ch * 0.11;
-  const dot = (x, y) => `<circle cx="${x}" cy="${y}" r="${cw * 0.045}" />`;
-  const mark = {
-    0: "",
-    1: dot(sx, my),
-    2: `${dot(sx - cw * 0.1, my)}${dot(sx + cw * 0.1, my)}`,
-    3: `<path d="M${sx - cw * 0.11} ${my + ch * 0.035} L${sx + cw * 0.11} ${my - ch * 0.035}" />`,
-    4: `<path d="M${sx - cw * 0.12} ${my + ch * 0.03} Q${sx} ${my - ch * 0.06} ${sx + cw * 0.12} ${my + ch * 0.03}" />`,
-  }[vowel];
-
-  return { ink: `<path d="${d.join(" ")}" />`, gold: mark };
-}
 
 /** Lines of glyph "words", laid out like a page of writing. */
 function specimen({ width, cw, ch, top, left, lines, seed, wordMin, wordMax, wordSpace = 1.2 }) {

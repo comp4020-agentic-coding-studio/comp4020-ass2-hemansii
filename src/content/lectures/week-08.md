@@ -12,6 +12,11 @@ screening:
   title: "The Lord of the Rings: The Return of the King"
   year: 2003
 subsystem: orthography
+example:
+  - words: sit-an ken-e hen-la-ni
+    morphemes: person-NEG this-ACC speak-NEG-YET
+    translation: Nobody speaks this yet.
+script: true
 requires:
   - lectures/week-02
   - lectures/week-05

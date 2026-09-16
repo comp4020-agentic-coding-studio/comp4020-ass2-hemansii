@@ -7,8 +7,11 @@ import {
   GLOSS_ABBREVIATIONS,
   HEIGHTS,
   MANNERS,
+  CODA_MARKS,
   PLACES,
   ROMAN_LETTERS,
+  SYLLABLE_FORMULA,
+  syllabify,
   VOWELS,
 } from "../src/lib/example-language";
 
@@ -233,6 +236,63 @@ describe("the chart draws the brief", () => {
         `⟨${roman}⟩ spells ${ipa.length} different phonemes (${ipa.join(", ")}) — the crit asks a ` +
           `stranger to read a sentence correctly from the script alone`,
       ).toBe(1);
+    }
+  });
+});
+
+describe("the script can write what the site prints", () => {
+  // Session 8 asks students for a script that "covers every phoneme, or you can
+  // state the principled reason it does not", and the crit asks a stranger to
+  // read a sentence correctly from the script alone. A form the site prints
+  // that the script cannot draw would fail both, silently.
+
+  it("gives every consonant its own shape", () => {
+    const shapes = new Map<string, string[]>();
+    for (const sound of CONSONANTS) {
+      const key = `${sound.side}${sound.grade}`;
+      shapes.set(key, [...(shapes.get(key) ?? []), sound.ipa]);
+    }
+    for (const [shape, ipa] of shapes) {
+      expect(
+        ipa.length,
+        `the shape ${shape} stands for ${ipa.length} sounds (${ipa.join(", ")}) — two letters ` +
+          `nobody can tell apart`,
+      ).toBe(1);
+    }
+  });
+
+  it("gives every vowel its own mark", () => {
+    const marks = VOWELS.map((vowel) => vowel.mark);
+    expect(new Set(marks).size, "two vowels share a mark").toBe(marks.length);
+  });
+
+  it("writes every form the worked examples print", () => {
+    for (const { id, glosses } of worked) {
+      for (const gloss of glosses) {
+        for (const form of gloss.words.trim().split(/\s+/)) {
+          expect(
+            () => syllabify(form),
+            `${id} prints "${form}", which the script cannot write`,
+          ).not.toThrow();
+        }
+      }
+    }
+  });
+
+  it("writes only the codas the syllable formula promises", () => {
+    // The formula is prose on the week 2 page and a lookup table in the
+    // component. They drift apart the moment one of them is edited alone.
+    const declared = SYLLABLE_FORMULA.match(/\(([^)]+)\)/)?.[1]?.split("/") ?? [];
+    expect(
+      [...declared].sort(),
+      `the formula ${SYLLABLE_FORMULA} and the script's coda marks disagree`,
+    ).toEqual(Object.keys(CODA_MARKS).sort());
+
+    for (const coda of Object.keys(CODA_MARKS)) {
+      expect(
+        CONSONANTS.some((sound) => sound.roman === coda),
+        `the script writes a coda "${coda}" that is not a consonant of the language`,
+      ).toBe(true);
     }
   });
 });

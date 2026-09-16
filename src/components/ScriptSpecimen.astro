@@ -1,0 +1,309 @@
+---
+// The example language written in its own script.
+//
+// Week 8 tells students that a featural script builds letters out of reusable
+// parts, and that Tolkien's Tengwar is not a font. The site has been asserting
+// that with a page of writing in the hero since week 1 — writing that means
+// nothing, because no sound was ever attached to a shape.
+//
+// This attaches them. The glyphs here come from `src/lib/glyph.mjs`, the same
+// function that draws the hero, so the letterforms on this page and the
+// letterforms on the home page are the same letterforms rather than two sets
+// that resemble each other. The sound each shape stands for is in
+// `src/lib/example-language.ts`, and the sentence is the one the worked example
+// has been carrying since week 3 — read off the same frontmatter, so the script
+// and the gloss cannot show different sentences.
+//
+// Two ink layers, gold offset from black, because that is the register the rest
+// of the Slop identity prints in.
+import { glyph } from "../lib/glyph.mjs";
+import { CODA_MARKS, CONSONANTS, VOWELS, syllabify } from "../lib/example-language";
+
+interface Props {
+  /** The lecture's `script:` flag — only the orthography week draws this. */
+  show?: unknown;
+  /** The same `example:` block the gloss renders, so both show one sentence. */
+  example?: unknown;
+  id: string;
+}
+
+const { show, example, id } = Astro.props;
+
+const first =
+  Array.isArray(example) && typeof (example[0] as { words?: unknown })?.words === "string"
+    ? (example[0] as { words: string; translation?: string })
+    : null;
+
+const active = Boolean(show) && first !== null;
+
+const CW = 44;
+const CH = 72;
+const WORD_GAP = CW * 1.25;
+/** Scaled from the artwork's stroke at its own cell size, via a custom property. */
+const STROKE = CW * 0.095;
+/** Riso misregistration, scaled from the artwork's offset at its own cell size. */
+const OFFSET = { x: CW * 0.068, y: CH * 0.031 };
+
+const consonantByRoman = new Map(CONSONANTS.map((sound) => [sound.roman, sound]));
+const vowelByRoman = new Map(VOWELS.map((sound) => [sound.roman, sound]));
+
+/** Draw one syllable into a cell, returning both ink layers already positioned. */
+const cell = (onset: string, vowel: string, coda: string | undefined, x: number) => {
+  const consonant = consonantByRoman.get(onset);
+  const nucleus = vowelByRoman.get(vowel);
+  if (!consonant || !nucleus) {
+    throw new Error(`${id}: the script has no letter for "${onset}${vowel}"`);
+  }
+  const drawn = glyph(
+    consonant.side,
+    consonant.grade,
+    nucleus.mark,
+    CW,
+    CH,
+    coda ? CODA_MARKS[coda] : 0,
+  );
+  return {
+    ink: `<g transform="translate(${x} 0)">${drawn.ink}</g>`,
+    gold: drawn.gold ? `<g transform="translate(${x} 0)">${drawn.gold}</g>` : "",
+  };
+};
+
+/** Lay the sentence out word by word, so the word spaces survive. */
+const layout = () => {
+  const ink: string[] = [];
+  const gold: string[] = [];
+  let x = 0;
+
+  for (const word of (first?.words ?? "").trim().split(/\s+/)) {
+    for (const syllable of syllabify(word)) {
+      const drawn = cell(syllable.onset, syllable.vowel, syllable.coda, x);
+      ink.push(drawn.ink);
+      if (drawn.gold) gold.push(drawn.gold);
+      x += CW;
+    }
+    x += WORD_GAP;
+  }
+
+  return { ink, gold, width: Math.max(x - WORD_GAP, CW) };
+};
+
+const sentence = active ? layout() : null;
+
+/** One glyph on its own, for the key. */
+const single = (side: "r" | "l", grade: 1 | 2 | 3 | 4, mark: 0 | 1 | 2 | 3 | 4) => {
+  const drawn = glyph(side, grade, mark, CW, CH);
+  return { ink: drawn.ink, gold: drawn.gold };
+};
+
+/** The consonants, each carrying the inherent vowel — the citation form. */
+const letters = CONSONANTS.map((sound) => ({
+  label: `/${sound.ipa}a/`,
+  ...single(sound.side, sound.grade, 0),
+}));
+
+/** One consonant through all five vowels, the way an abugida is taught. */
+const CARRIER = CONSONANTS[0] as (typeof CONSONANTS)[number];
+const series = [...VOWELS]
+  .sort((a, b) => a.mark - b.mark)
+  .map((vowel) => ({
+    label: `/${CARRIER.ipa}${vowel.ipa}/`,
+    ...single(CARRIER.side, CARRIER.grade, vowel.mark),
+  }));
+---
+
+{
+  active && sentence && (
+    <section
+      class="script"
+      style={`--script-stroke:${STROKE}px`}
+      aria-labelledby={`script-${id}`}
+    >
+      <h2 id={`script-${id}`}>In the script</h2>
+
+      <p class="script-lede">
+        The same sentence, written the way its speakers write it. These are the letterforms in
+        the artwork at the top of this site — the page of writing on the home page is this
+        script, drawn by the same function, saying nothing in particular.
+      </p>
+
+      <figure>
+        <svg
+          class="script-svg"
+          viewBox={`0 0 ${sentence.width} ${CH * 1.16}`}
+          style={`max-width:${sentence.width}px`}
+          role="img"
+          aria-label={`The sentence “${first?.translation ?? first?.words}” written in the invented script`}
+        >
+          <g
+            class="script-gold"
+            transform={`translate(${OFFSET.x} ${OFFSET.y})`}
+            set:html={sentence.gold.join("")}
+          />
+          <g class="script-ink" set:html={sentence.ink.join("")} />
+        </svg>
+        <figcaption>
+          <span class="script-roman">{first?.words}</span>
+          {first?.translation && <span class="script-free">‘{first.translation}’</span>}
+        </figcaption>
+      </figure>
+
+      <p class="script-note">
+        Eight consonants, and the shape is not arbitrary. The bow sits on the right of the stem
+        for the four made at the alveolar ridge and on the left for the other four; the grade
+        then runs plosive, fricative, nasal, lateral. Learn those two rules and you can sound out
+        a letter nobody taught you, which is what featural means.
+      </p>
+
+      <figure class="script-key">
+        <figcaption>The eight letters, each with the inherent vowel</figcaption>
+        <ul>
+          {letters.map((letter) => (
+            <li>
+              <svg class="script-svg" viewBox={`0 0 ${CW} ${CH * 1.16}`} aria-hidden="true">
+                <g
+                  class="script-gold"
+                  transform={`translate(${OFFSET.x} ${OFFSET.y})`}
+                  set:html={letter.gold}
+                />
+                <g class="script-ink" set:html={letter.ink} />
+              </svg>
+              <span>{letter.label}</span>
+            </li>
+          ))}
+        </ul>
+      </figure>
+
+      <figure class="script-key">
+        <figcaption>One letter through all five vowels</figcaption>
+        <ul>
+          {series.map((item) => (
+            <li>
+              <svg class="script-svg" viewBox={`0 0 ${CW} ${CH * 1.16}`} aria-hidden="true">
+                <g
+                  class="script-gold"
+                  transform={`translate(${OFFSET.x} ${OFFSET.y})`}
+                  set:html={item.gold}
+                />
+                <g class="script-ink" set:html={item.ink} />
+              </svg>
+              <span>{item.label}</span>
+            </li>
+          ))}
+        </ul>
+      </figure>
+
+      <p class="script-note">
+        The vowel hangs above the stem and <em>a</em> is written with no mark at all, which makes
+        this an abugida rather than an alphabet. A coda takes the same mark shapes below the
+        stem, so the script needs no new letters for it — position carries the difference. That
+        only works because the week 5 formula allows two codas and no clusters.
+      </p>
+    </section>
+  )
+}
+
+<style>
+  /* Brand tokens only, so the block follows the palette into dark mode. */
+  .script {
+    margin-block: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--at-border, currentColor);
+    border-radius: var(--at-border-radius, 0);
+    background: var(--at-bg-alt, transparent);
+  }
+
+  .script h2 {
+    margin-block: 0 0.75rem;
+    font-size: var(--at-font-size-xs, 0.75rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--at-accent, currentColor);
+  }
+
+  .script-lede {
+    margin-block: 0 1rem;
+  }
+
+  .script figure {
+    margin: 0;
+  }
+
+  /* The ink layer takes the page's own colour, so it inverts with the theme. */
+  .script-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .script-ink {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: var(--script-stroke, 4.2);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .script-gold {
+    fill: var(--at-accent, currentColor);
+    stroke: var(--at-accent, currentColor);
+    stroke-width: var(--script-stroke, 4.2);
+    stroke-linecap: round;
+    opacity: 0.92;
+  }
+
+  .script figcaption {
+    margin-block-start: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+  }
+
+  .script-roman {
+    font-family: var(--at-font-mono, monospace);
+  }
+
+  .script-free {
+    font-style: italic;
+  }
+
+  .script-note {
+    margin-block: 1.25rem 0;
+    font-size: var(--at-font-size-sm, 0.875rem);
+    opacity: 0.85;
+  }
+
+  .script .script-key {
+    margin-block-start: 2rem;
+  }
+
+  .script-key figcaption {
+    margin-block: 0 0.5rem;
+    font-size: var(--at-font-size-xs, 0.75rem);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .script-key ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .script-key li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    width: 3rem;
+  }
+
+  .script-key span {
+    font-family: var(--at-font-mono, monospace);
+    font-size: var(--at-font-size-sm, 0.875rem);
+    opacity: 0.8;
+  }
+</style>
