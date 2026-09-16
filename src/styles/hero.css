@@ -1,0 +1,30 @@
+/*
+ * The hero treatment, shared by every page that has one.
+ *
+ * The theme scrims a hero with 60-80% pure black so white title text stays
+ * legible. That is right for a photograph and wrong for two-ink artwork on
+ * cream: it turns the gold grey and every section opens on a smudge. So the
+ * scrim inverts — near-solid cream under the title, falling away above it —
+ * and the title goes near-black, which reads at roughly 15:1 rather than the
+ * 5-9:1 white-on-grey managed.
+ *
+ * It lives in its own file because the pages that need it arrive through two
+ * different layouts: PageLayout for the Markdown pages, ContentLayout direct
+ * for the three that are .astro.
+ */
+.at-hero-content {
+  background: linear-gradient(
+    to top,
+    rgb(242 236 224 / 94%),
+    rgb(242 236 224 / 88%) 38%,
+    rgb(242 236 224 / 30%) 68%,
+    rgb(242 236 224 / 0%)
+  );
+}
+
+.at-hero-title {
+  color: var(--at-black, #17130f);
+  /* Sits low in the band, clear of the artwork above it. */
+  padding-block: var(--at-spacing-2xl) var(--at-spacing-lg);
+  text-shadow: 0 1px 0 rgb(242 236 224 / 95%);
+}
