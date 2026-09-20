@@ -3,24 +3,17 @@
 //
 // The home page has always claimed that the order is not negotiable and that
 // week six is impossible without week two. A prospective student reading that
-// has to take it on trust: nothing on the page shows what each week adds, what
-// it needs, or which film it hangs on.
+// has to take it on trust: nothing on the page shows what each week adds or
+// which film it hangs on.
 //
 // This is that claim as the schedule. Every row is read from the lecture
-// frontmatter — the subsystem, the requires: edges and the screening — so the
-// spine cannot say one thing while the week pages say another, and a week
-// added later appears here without anybody remembering to update a list.
+// frontmatter — the subsystem and the screening — so the spine cannot say one
+// thing while the week pages say another, and a week added later appears here
+// without anybody remembering to update a list. Which weeks a week depends on
+// is the week page's own business: "Builds on" and "Feeds into" say it there,
+// where there is room to name them.
 import { getPublishedCollection } from "astro-course-university/content";
 import { withBase } from "astro-theme-university/url";
-
-const asRefs = (value: unknown): number[] =>
-  Array.isArray(value)
-    ? value
-        .filter((ref): ref is string => typeof ref === "string")
-        .map((ref) => Number(ref.replace(/^lectures\/week-/, "")))
-        .filter((week) => Number.isInteger(week))
-        .sort((a, b) => a - b)
-    : [];
 
 interface Screening {
   title: string;
@@ -37,13 +30,12 @@ const lectures = await getPublishedCollection("lectures");
 
 const weeks = lectures
   .map((lecture) => {
-    const extra = lecture.data as { subsystem?: unknown; screening?: unknown; requires?: unknown };
+    const extra = lecture.data as { subsystem?: unknown; screening?: unknown };
     return {
       slug: lecture.id,
       week: lecture.data.week,
       subsystem: typeof extra.subsystem === "string" ? extra.subsystem : "the crit",
       screening: isScreening(extra.screening) ? extra.screening : null,
-      requires: asRefs(extra.requires),
     };
   })
   .sort((a, b) => a.week - b.week);
@@ -60,16 +52,6 @@ const weeks = lectures
             Week {entry.week}
           </a>
           <span class="spine-subsystem">{entry.subsystem}</span>
-          <span class="spine-needs">
-            {entry.requires.length > 0 && (
-              <>
-                <span class="spine-needs-label">needs</span>
-                {entry.requires.map((week) => (
-                  <span class="spine-needs-week">{week}</span>
-                ))}
-              </>
-            )}
-          </span>
           <span class="spine-film">
             {entry.screening ? (
               <>
@@ -85,9 +67,8 @@ const weeks = lectures
   </ol>
 
   <p class="spine-note">
-    Eleven films, all compulsory. The dependencies are not decoration — week 6 needs week 2
-    because you cannot coin a word out of sounds you have not chosen, and week 8 needs week 5
-    because a syllable shape decides what a writing system can be.
+    Eleven films, all compulsory. Each week builds on what came before, so the decisions you
+    make early in the course will shape the language you develop later.
   </p>
 </section>
 
@@ -109,18 +90,17 @@ const weeks = lectures
     gap: 0.1rem 1rem;
     padding-block: 0.6rem;
     border-block-end: 1px solid var(--at-divider, currentColor);
-    /* Phone: week and subsystem share a line, then needs, then the film. */
+    /* Phone: week and subsystem share a line, then the film. */
     grid-template-areas:
       "week subsystem"
-      "needs needs"
       "film film";
     grid-template-columns: auto 1fr;
   }
 
   @media (min-width: 45rem) {
     .spine li {
-      grid-template-areas: "week subsystem needs film";
-      grid-template-columns: 5rem 9rem 8rem 1fr;
+      grid-template-areas: "week subsystem film";
+      grid-template-columns: 5rem 11rem 1fr;
       align-items: baseline;
       gap: 1rem;
     }
@@ -134,25 +114,6 @@ const weeks = lectures
 
   .spine-subsystem {
     grid-area: subsystem;
-  }
-
-  .spine-needs {
-    grid-area: needs;
-    display: flex;
-    align-items: baseline;
-    gap: 0.35rem;
-    font-size: var(--at-font-size-sm, 0.875rem);
-    opacity: 0.7;
-  }
-
-  .spine-needs-label {
-    font-size: var(--at-font-size-xs, 0.75rem);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-  .spine-needs-week {
-    font-variant-numeric: tabular-nums;
   }
 
   .spine-film {
