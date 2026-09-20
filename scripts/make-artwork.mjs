@@ -1,5 +1,6 @@
-// Generates every piece of artwork on the site: the home hero, the link-preview
-// card, and one banner per section.
+// Generates the two pieces of artwork the site draws rather than illustrates:
+// the home hero and the link-preview card. The six section banners are cut from
+// drawings instead, in `scripts/make-banners.mjs`.
 //
 // The course teaches that a featural script builds its letters out of a small
 // number of reusable parts, so that a letter's shape tells you something about
@@ -12,27 +13,13 @@
 // one, which is what two-ink risograph misregistration actually looks like and
 // is the register the rest of the Slop identity is printed in.
 //
-// The hero is that, straight: speech drawn as a spectrogram. The six section
-// banners are illustrated scenes in the same two inks — a lecture room, a
-// workshop, a projector — and they live in `scripts/scenes.mjs`, which is also
-// where the reasoning about the crop and the hero's scrim is written down.
+// The hero is that, straight: speech drawn as a spectrogram.
 //
 //   node scripts/make-artwork.mjs
 //
 // Rerun after changing anything here; the outputs are committed.
 
 import sharp from "sharp";
-
-import {
-  SCENE_HEIGHT,
-  SCENE_WIDTH,
-  crowd,
-  everyoneTalking,
-  lectureTheatre,
-  paperwork,
-  projector,
-  submitting,
-} from "./scenes.mjs";
 
 const CREAM = "#f2ece0";
 const INK = "#17130f";
@@ -51,14 +38,6 @@ function svg({ width, height, body }) {
   <rect width="${width}" height="${height}" fill="${CREAM}"/>
   ${body}
 </svg>`;
-}
-
-/** Two filled plates, gold offset from ink — the same misregistration `inked` gives strokes. */
-function plates({ ink, gold }, dx = 5, dy = 4) {
-  return (
-    `<g transform="translate(${dx} ${dy})" opacity="0.92">${gold.join("")}</g>` +
-    `<g>${ink.join("")}</g>`
-  );
 }
 
 /** Render one cream-ground artwork to AVIF. */
@@ -114,23 +93,4 @@ await write("hero-home.avif", W, H, bars(4022, W, H));
     .png()
     .toFile("src/assets/images/card.png");
   console.log("wrote src/assets/images/card.png");
-}
-
-// ------------------------------------------------------------- banners -----
-// One illustrated scene per section, drawn in scripts/scenes.mjs. They are
-// shorter than the hero on purpose: at that aspect the desktop crop keeps
-// almost the whole height, so the drawable band is the top half of the image
-// rather than a sliver of its middle. See the note at the top of scenes.mjs.
-const BANNERS = [
-  ["banner-lectures", lectureTheatre, 4022],
-  ["banner-workshops", everyoneTalking, 771],
-  ["banner-assessment", submitting, 1503],
-  ["banner-people", crowd, 3310],
-  ["banner-policies", paperwork, 96],
-  ["banner-screenings", projector, 1211],
-];
-
-for (const [name, scene, seed] of BANNERS) {
-  const body = plates(scene(seed, SCENE_WIDTH, SCENE_HEIGHT));
-  await write(`${name}.avif`, SCENE_WIDTH, SCENE_HEIGHT, body);
 }
