@@ -1,8 +1,8 @@
 ---
-title: Nobody speaks it properly
+title: Variation and register
 description:
-  Pidgins, creoles and register. A language with exactly one way of saying
-  things is not a language yet, it is a specimen
+  Pidgins, creoles and register. A language with only one way of saying
+  something is not finished yet
 week: 7
 date: 2027-04-05
 teachers:

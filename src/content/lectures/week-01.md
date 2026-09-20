@@ -1,8 +1,8 @@
 ---
-title: Nobody starts with the story
+title: Starting with the language, not the story
 description:
-  Tolkien built the languages first and the world second. What that inversion
-  asks of you, and the four questions your design brief has to answer
+  Tolkien built his languages first and the world afterwards. What that order
+  of work asks of you, and the four questions your design brief has to answer
 week: 1
 date: 2027-02-22
 teachers:

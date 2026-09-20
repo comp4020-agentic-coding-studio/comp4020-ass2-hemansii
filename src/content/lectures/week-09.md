@@ -1,8 +1,8 @@
 ---
-title: What Arrival gets wrong
+title: Language and thought
 description:
   The film makes a strong claim about language and thought. The evidence
-  supports a much weaker one, and the weaker one is more interesting
+  supports a much weaker version of it, which is the more interesting claim
 week: 9
 date: 2027-04-19
 teachers:

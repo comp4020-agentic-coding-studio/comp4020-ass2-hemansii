@@ -1,8 +1,8 @@
 ---
-title: Designing for the actor's mouth
+title: Which sounds can sit together
 description:
-  Phonotactics — the rules about what can sit next to what. Frommer built Na'vi
-  for people who had to say it on camera, in a fortnight, correctly
+  Phonotactics — the rules about which sounds can follow which. Frommer built
+  Na'vi for actors who had to say it on camera, correctly, in a fortnight
 week: 5
 date: 2027-03-22
 teachers:
