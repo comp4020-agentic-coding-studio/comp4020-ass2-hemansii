@@ -58,19 +58,23 @@ async function paper(file) {
 }
 
 /**
- * The paper tone of a sampled block of the drawing, in STEPS horizontal bands.
+ * The paper tone of a sampled block of the drawing, in STEPS bands.
  *
  * Each band is the pixel at PAPER_PERCENTILE of its own luminance order, which
  * on a line drawing is paper rather than ink however much ink is in the band.
+ * `down` bands the block by row, for the margins either side of the drawing;
+ * `across` bands it by column, for the floor extended below it.
  */
-function paperSteps({ data, info }) {
+function paperSteps({ data, info }, axis) {
   const out = Buffer.alloc(STEPS * 3);
-  const rows = Math.floor(info.height / STEPS);
+  const down = axis === "down";
+  const size = Math.floor((down ? info.height : info.width) / STEPS);
   for (let step = 0; step < STEPS; step += 1) {
     const pixels = [];
-    for (let y = step * rows; y < (step + 1) * rows; y += 1) {
-      for (let x = 0; x < info.width; x += 1) {
-        const at = (y * info.width + x) * info.channels;
+    for (let n = step * size; n < (step + 1) * size; n += 1) {
+      const span = down ? info.width : info.height;
+      for (let m = 0; m < span; m += 1) {
+        const at = (down ? n * info.width + m : m * info.width + n) * info.channels;
         pixels.push([data[at] * 0.299 + data[at + 1] * 0.587 + data[at + 2] * 0.114, at]);
       }
     }
@@ -95,11 +99,17 @@ function paperSteps({ data, info }) {
  * `band` below) — the lecture room ends in a slab of gold and the cinema in a
  * black curtain, and stretched across a third of the sheet either of those
  * stops being a drawing and becomes a colour field.
+ *
+ * The projector is also the only one whose window runs off the bottom of the
+ * drawing. Its audience is the lowest thing in any of the six, and keeping the
+ * screen whole fixes the top of the window at about y 120, which leaves the
+ * seats sitting in the title wash. The floor below them is extended rather than
+ * the audience moved, because the audience is where the perspective puts it.
  */
 const BANNERS = [
   ["lectures", "banner-lectures", 170, 470, [205, 146], 0],
   ["workshops", "banner-workshops", 50, 520, [0, 0], 0],
-  ["screenings", "banner-screenings", 120, 648, [98, 88], -160],
+  ["screenings", "banner-screenings", 120, 860, [98, 88], 0],
   ["assessment", "banner-assessment", 60, 520, [0, 0], 0],
   ["people", "banner-people", 105, 500, [0, 0], 0],
   ["policies", "banner-policies", 100, 490, [0, 0], 0],
@@ -138,11 +148,36 @@ async function band(file, top, height, sides, shift) {
   const meta = await sharp(file).metadata();
   const kept = meta.width - sides[0] - sides[1];
   const width = Math.round(kept * (HEIGHT / height));
-  const art = await sharp(file)
-    .extract({ left: sides[0], top, width: kept, height })
-    .resize(width, HEIGHT, { fit: "fill" })
-    .png()
-    .toBuffer();
+
+  // A window taller than what is left of the drawing gets the rest of its floor
+  // built the same way the margins are: the bottom of the drawing, banded by
+  // column and read at the paper percentile, then run on down.
+  const drawn = Math.min(height, meta.height - top);
+  const cut = sharp(file).extract({ left: sides[0], top, width: kept, height: drawn });
+  let source = await cut.png().toBuffer();
+  if (drawn < height) {
+    const sample = await sharp(source)
+      .extract({ left: 0, top: drawn - SAMPLE, width: kept, height: SAMPLE })
+      .raw()
+      .toBuffer({ resolveWithObject: true });
+    const below = await sharp(paperSteps(sample, "across"), {
+      raw: { width: STEPS, height: 1, channels: 3 },
+    })
+      .resize(kept, height - drawn, { fit: "fill" })
+      .png()
+      .toBuffer();
+    source = await sharp({
+      create: { width: kept, height, channels: 3, background: "#ffffff" },
+    })
+      .composite([
+        { input: source, left: 0, top: 0 },
+        { input: below, left: 0, top: drawn },
+      ])
+      .png()
+      .toBuffer();
+  }
+
+  const art = await sharp(source).resize(width, HEIGHT, { fit: "fill" }).png().toBuffer();
 
   const left = Math.round((WIDTH - width) / 2) + shift;
   const margins = [];
@@ -159,7 +194,7 @@ async function band(file, top, height, sides, shift) {
       .raw()
       .toBuffer({ resolveWithObject: true });
 
-    const strip = await sharp(paperSteps(sample), { raw: { width: 1, height: STEPS, channels: 3 } })
+    const strip = await sharp(paperSteps(sample, "down"), { raw: { width: 1, height: STEPS, channels: 3 } })
       .resize(span, HEIGHT, { fit: "fill" })
       .ensureAlpha()
       .raw()
