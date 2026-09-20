@@ -10,6 +10,11 @@ teachers:
 screening:
   title: Dune
   year: 2021
+  poster: /src/assets/posters/dune.jpg
+  posterAlt: >-
+    Theatrical poster. Almost entirely black, with the curved limb of a sun burning
+    orange down the right-hand side; DUNE letterspaced in thin caps across the middle
+    and PART ONE below it
 subsystem: lexicon
 requires:
   - lectures/week-02

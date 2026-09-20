@@ -10,6 +10,11 @@ teachers:
 screening:
   title: Blade Runner
   year: 1982
+  poster: /src/assets/posters/blade-runner.jpg
+  posterAlt: >-
+    Theatrical poster for the Final Cut. A painted montage — Harrison Ford's face large
+    at the upper right, a woman with red lips below him, other faces and a neon-lit
+    street filling the lower half
 subsystem: sociolinguistics
 example:
   - label: Careful

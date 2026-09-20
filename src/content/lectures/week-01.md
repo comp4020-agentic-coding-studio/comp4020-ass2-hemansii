@@ -11,6 +11,11 @@ slides: /decks/week-01/
 screening:
   title: "The Lord of the Rings: The Fellowship of the Ring"
   year: 2001
+  poster: /src/assets/posters/fellowship-of-the-ring.jpeg
+  posterAlt: >-
+    Theatrical poster. The title in gold serif caps across the top; Frodo in a green
+    cloak at the centre front with Gandalf and the rest of the company ranged behind
+    him in two columns, and a line of mounted riders silhouetted along the foot
 subsystem: design brief
 related:
   - sessions/01-the-design-brief

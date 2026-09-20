@@ -10,6 +10,11 @@ teachers:
 screening:
   title: 'Star Trek: The Next Generation — "Darmok"'
   year: 1991
+  poster: /src/assets/posters/star-trek-tng-darmok.jpeg
+  posterAlt: >-
+    Illustrated poster. Picard and Dathon standing back to back in front of a purple
+    silhouette of the horned beast, under the words DARMOK AND JALAD AT TANAGRA, with
+    the episode's other phrases listed beneath them
 subsystem: pragmatics
 example:
   - words: hen-la-ni

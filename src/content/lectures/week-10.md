@@ -10,6 +10,11 @@ teachers:
 screening:
   title: The 13th Warrior
   year: 1999
+  poster: /src/assets/posters/the-13th-warrior.jpg
+  posterAlt: >-
+    Theatrical poster. A longship silhouetted on dark water beneath a huge orange sun
+    with an eye set into it; Antonio Banderas billed above the title and the line "Fear
+    reigns" below it
 subsystem: acquisition
 requires:
   - lectures/week-04

@@ -11,6 +11,11 @@ teachers:
 screening:
   title: "The Lord of the Rings: The Return of the King"
   year: 2003
+  poster: /src/assets/posters/return-of-the-king.jpg
+  posterAlt: >-
+    Theatrical poster. Aragorn raising a sword at the top with Gandalf behind him,
+    Arwen, Frodo, Sam and Gollum in the lower half, and the title in gold at the foot
+    above the line "The journey ends"
 subsystem: orthography
 example:
   - words: sit-an ken-e hen-la-ni

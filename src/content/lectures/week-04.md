@@ -10,6 +10,10 @@ teachers:
 screening:
   title: "Game of Thrones, season 1"
   year: 2011
+  poster: /src/assets/posters/game-of-thrones-s1.jpeg
+  posterAlt: >-
+    Series poster. The Iron Throne in near-darkness, its blades fanned out behind the
+    seat, with the letters GOT set large and pale across the middle
 subsystem: syntax
 example:
   - label: Statement

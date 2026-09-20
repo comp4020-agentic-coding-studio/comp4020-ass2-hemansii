@@ -10,6 +10,11 @@ teachers:
 screening:
   title: "Star Trek VI: The Undiscovered Country"
   year: 1991
+  poster: /src/assets/posters/star-trek-vi.jpg
+  posterAlt: >-
+    Theatrical poster. "The battle for peace has begun" across the top, the Enterprise
+    streaking diagonally through a starfield with a Klingon face looming behind it, and
+    an orange starburst at the foot behind the logo
 subsystem: morphology
 example:
   - words: sit-an ken-e hen-la-ni

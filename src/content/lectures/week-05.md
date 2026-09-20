@@ -10,6 +10,10 @@ teachers:
 screening:
   title: Avatar
   year: 2009
+  poster: /src/assets/posters/avatar.jpeg
+  posterAlt: >-
+    Theatrical poster. A close crop of a blue Na'vi face, one yellow eye wide, faint
+    luminous flecks across the skin; "James Cameron's AVATAR" in white beneath it
 subsystem: phonotactics
 requires:
   - lectures/week-02

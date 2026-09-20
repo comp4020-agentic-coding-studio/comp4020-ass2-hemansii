@@ -10,6 +10,11 @@ teachers:
 screening:
   title: Arrival
   year: 2016
+  poster: /src/assets/posters/arrival.jpg
+  posterAlt: >-
+    Theatrical poster. Amy Adams and Jeremy Renner above a dark lens-shaped craft
+    hanging over a misted field, Forest Whitaker in uniform below them and military
+    helicopters off to the left; ARRIVAL letterspaced along the foot
 subsystem: phonology
 inventory: true
 requires:
