@@ -2,7 +2,7 @@
 title: Weekly Build Log
 description:
   One short entry a week — the film you watched, the subsystem you added, and
-  the specific thing the first forced the second to be
+  what the film changed about the decision you made
 week: 2
 due: 2027-05-07T17:00:00+10:00
 weight: 15

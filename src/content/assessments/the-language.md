@@ -1,8 +1,8 @@
 ---
 title: The Language
 description:
-  The whole thing — description, lexicon, script and a glossed text — plus the
-  crit, where you read it aloud and a stranger reads a sentence back
+  The finished language — description, lexicon, script and a glossed text — plus
+  the crit, where you read it aloud and somebody else reads a sentence back
 week: 12
 due: 2027-05-21T17:00:00+10:00
 weight: 40

@@ -1,8 +1,8 @@
 ---
 title: What Arrival Gets Wrong
 description:
-  An essay on the film's claim about language and thought, the evidence that
-  bears on it, and the difference between the strong version and the true one
+  An essay on the film's claim about language and thought, what the research
+  actually shows, and how the two differ
 week: 9
 due: 2027-04-30T17:00:00+10:00
 weight: 30

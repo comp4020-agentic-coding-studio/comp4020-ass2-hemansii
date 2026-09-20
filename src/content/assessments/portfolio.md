@@ -1,8 +1,8 @@
 ---
 title: Phonology and Grammar Portfolio
 description:
-  The systems rather than the vocabulary — inventory, phonotactics, morphology
-  and syntax, in a form somebody else could build from
+  Your language systems rather than its vocabulary — inventory, phonotactics,
+  morphology and syntax, written so that somebody else could build from them
 week: 6
 due: 2027-04-02T17:00:00+10:00
 weight: 15
