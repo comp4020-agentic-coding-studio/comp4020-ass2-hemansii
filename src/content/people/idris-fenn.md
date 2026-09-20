@@ -1,8 +1,8 @@
 ---
 title: Idris Fenn
 description:
-  A tutor who runs the Thursday workshops, and the person most likely to ask
-  you to pronounce something you have written down and hoped nobody would.
+  A tutor who runs the Thursday workshops, and the person most likely to ask you
+  to pronounce a sound you have written down but not yet tried saying.
 affiliation: Slop University School of Invented Disciplines
 role: tutor
 email: idris.fenn@slop.university

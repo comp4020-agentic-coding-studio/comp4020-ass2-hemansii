@@ -2,7 +2,7 @@
 title: Marisol Quaye
 description:
   A phonetician who spent eleven years documenting languages with very few
-  remaining speakers, and now teaches people to build ones that have none.
+  remaining speakers, and now teaches students to build new ones.
 affiliation: Slop University School of Invented Disciplines
 role: convenor
 email: marisol.quaye@slop.university

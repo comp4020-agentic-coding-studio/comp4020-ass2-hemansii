@@ -1,8 +1,8 @@
 ---
 title: Wren Halloran
 description:
-  A type designer who visits in week eight to explain why a beautiful script
-  that cannot be written quickly is a failed script.
+  A type designer who visits in week eight to teach script design that works in
+  practice — letterforms you can actually write, quickly and by hand.
 affiliation: Visiting, from outside the university
 role: guest
 contact: Available in week eight only, before and after the lecture.
