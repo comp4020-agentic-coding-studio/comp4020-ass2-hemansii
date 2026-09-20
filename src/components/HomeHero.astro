@@ -63,9 +63,14 @@ const { code, title, image, imageAlt } = Astro.props;
   }
 
   /* Off the floor of the band: the artwork reads as a band the title sits on
-     rather than a strip behind it, and the bars below stay visible. */
+     rather than a strip behind it, and the bars below stay visible.
+
+     Six per cent off the theme's display size, which the section titles do not
+     need: theirs are one word and this is four, so "Speaks This Yet" ran to
+     within a few characters of the measure at every width. */
   .home-hero .at-hero-title {
     padding-block: var(--at-spacing-2xl) var(--at-spacing-2xl);
+    font-size: clamp(1.88rem, 4.7vw, 4.23rem);
   }
 
   .home-hero-code {
