@@ -1,5 +1,5 @@
 ---
-title: The crit
+title: Fifteen minutes each
 description:
   Twelve lines, read aloud, in a language you built. Then somebody who has never
   seen it reads a sentence back to you

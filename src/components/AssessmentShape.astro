@@ -1,0 +1,175 @@
+---
+// The four pieces of work as one picture.
+//
+// The index lists four cards and says "four pieces of work", but a student
+// deciding whether to take the elective cannot see the shape of the year from
+// that: what each piece is worth, when it lands, or that one of them runs
+// underneath all the others. The cards are also ordered by the week a piece is
+// set, so their due dates read 7 May, 2 April, 30 April, 21 May and look like a
+// sorted list that has gone wrong.
+//
+// This is the same four, ordered the way you will actually meet them, with the
+// weight drawn as well as stated. The due date is mapped back onto the teaching
+// calendar — week 6 runs 29 March to 4 April, so 2 April is "end of week 6" —
+// by reading the lecture dates, so the calendar here cannot drift from the one
+// on the week pages.
+import { getPublishedCollection } from "astro-course-university/content";
+import { withBase } from "astro-theme-university/url";
+import { formatCourseDate } from "../lib/dates";
+
+const [assessments, lectures] = await Promise.all([
+  getPublishedCollection("assessments"),
+  getPublishedCollection("lectures"),
+]);
+
+/** Monday of each teaching week, so a due date can be placed in the semester. */
+const weeks = lectures
+  .map((lecture) => ({ week: lecture.data.week, start: new Date(lecture.data.date) }))
+  .sort((a, b) => a.start.getTime() - b.start.getTime());
+
+const lastWeek = weeks[weeks.length - 1];
+
+/** Which teaching week a date falls in — or that it is past the end of them. */
+function inWeek(due: Date): string {
+  const found = [...weeks].reverse().find((entry) => due >= entry.start);
+  if (!found) return "before teaching starts";
+  const daysAfter = (due.getTime() - found.start.getTime()) / 86_400_000;
+  if (found.week === lastWeek?.week && daysAfter >= 7) return `after week ${found.week}`;
+  return `end of week ${found.week}`;
+}
+
+const pieces = assessments
+  .map((assessment) => ({
+    slug: assessment.id,
+    title: assessment.data.title,
+    weight: assessment.data.weight ?? 0,
+    set: assessment.data.week,
+    due: new Date(assessment.data.due),
+  }))
+  .sort((a, b) => a.due.getTime() - b.due.getTime());
+
+const total = pieces.reduce((sum, piece) => sum + piece.weight, 0);
+const heaviest = Math.max(...pieces.map((piece) => piece.weight));
+---
+
+<section class="shape" aria-labelledby="shape-heading">
+  <h2 id="shape-heading">What it adds up to</h2>
+
+  <ol>
+    {
+      pieces.map((piece) => (
+        <li>
+          <a class="shape-title" href={withBase(`/assessments/${piece.slug}/`)}>{piece.title}</a>
+          <span class="shape-weight">{piece.weight}%</span>
+          <span class="shape-bar" aria-hidden="true">
+            <span style={`inline-size:${(piece.weight / heaviest) * 100}%`} />
+          </span>
+          <span class="shape-when">
+            set week {piece.set} · due {formatCourseDate(piece.due)}, {inWeek(piece.due)}
+          </span>
+        </li>
+      ))
+    }
+  </ol>
+
+  <p class="shape-total">
+    <span>{total}%</span> of the course, and no exam.
+  </p>
+
+  <p class="shape-note">
+    They are not four things you do one after another. The Build Log runs underneath the
+    other three from week 2 to week 11, which is why it is worth fifteen per cent for two
+    hundred words a week — the cost is remembering to do it, not the writing. The fortnight
+    the essay occupies is the only stretch of the course in which you touch no conlang
+    material at all.
+  </p>
+</section>
+
+<style>
+  /* Brand tokens only, so the block follows the palette into dark mode. */
+  .shape {
+    margin-block: 2.5rem;
+  }
+
+  .shape h2 {
+    margin-block-end: 0.75rem;
+  }
+
+  .shape ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-block-start: 1px solid var(--at-divider, currentColor);
+  }
+
+  .shape li {
+    display: grid;
+    gap: 0.15rem 1rem;
+    padding-block: 0.7rem;
+    border-block-end: 1px solid var(--at-divider, currentColor);
+    /* Phone: title and weight share a line, then the bar, then the dates. */
+    grid-template-areas:
+      "title weight"
+      "bar bar"
+      "when when";
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+  }
+
+  @media (min-width: 45rem) {
+    .shape li {
+      grid-template-areas: "title weight bar when";
+      grid-template-columns: minmax(10rem, 1fr) 3rem 6rem minmax(14rem, 1.1fr);
+    }
+  }
+
+  .shape-title {
+    grid-area: title;
+  }
+
+  .shape-weight {
+    grid-area: weight;
+    font-variant-numeric: tabular-nums;
+    text-align: end;
+  }
+
+  /* The bar is the only thing here that is not also said in words, so it is
+     hidden from assistive tech rather than described twice. */
+  .shape-bar {
+    grid-area: bar;
+    display: block;
+    block-size: 0.4rem;
+    align-self: center;
+    background: var(--at-bg-alt, transparent);
+    border: 1px solid var(--at-divider, currentColor);
+  }
+
+  .shape-bar span {
+    display: block;
+    block-size: 100%;
+    background: var(--at-accent, currentColor);
+  }
+
+  .shape-when {
+    grid-area: when;
+    font-size: var(--at-font-size-sm, 0.875rem);
+    opacity: 0.75;
+  }
+
+  .shape-total {
+    margin-block: 0.7rem 0;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .shape-total span {
+    font-variant-numeric: tabular-nums;
+    color: var(--at-accent, currentColor);
+  }
+
+  .shape-note {
+    margin-block-start: 1rem;
+    font-size: var(--at-font-size-sm, 0.875rem);
+    opacity: 0.85;
+  }
+</style>

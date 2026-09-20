@@ -5,8 +5,8 @@ import RelatedContent from "astro-course-university/components/RelatedContent.as
 import SpecList from "astro-course-university/components/SpecList.astro";
 import Callout from "astro-theme-university/components/Callout.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import AssessmentFacts from "../../components/AssessmentFacts.astro";
 import MarkingModel from "../../components/MarkingModel.astro";
-import { formatCourseDate } from "../../lib/dates";
 import { graphCollections, siteConfig } from "../../site-config";
 
 export async function getStaticPaths() {
@@ -35,7 +35,11 @@ const { Content } = await render(assessment);
       </Callout>
     )
   }
-  <p><strong>Due:</strong> {formatCourseDate(assessment.data.due)} · <strong>Weight:</strong> {assessment.data.weight}%</p>
+  <AssessmentFacts
+    due={assessment.data.due}
+    weight={assessment.data.weight}
+    set={assessment.data.week}
+  />
   <Content />
   <SpecList spec={assessment.data.spec}>
     The brief poses the problem and leaves room for a response. The spec is the

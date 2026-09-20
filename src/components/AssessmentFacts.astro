@@ -1,0 +1,121 @@
+---
+// Due date, weight, and how long you have — at the top of a brief.
+//
+// These were a single line of bold text between the description and the brief,
+// set in body copy and easy to read past. On a page whose whole job is "what do
+// I hand in, and when", they are the part a student comes back to check, and
+// the part they check on a phone the night before.
+//
+// The countdown is not decoration: a due date on its own does not tell you
+// whether a piece is close, and these are all set weeks before they land. It is
+// filled in by the browser rather than at build time, and the cell is not
+// rendered at all without scripting — a static site that computes "3 weeks
+// away" once and then serves it for a year is publishing a wrong fact, and a
+// wrong fact about a deadline is worse than no fact.
+import { formatCourseDate } from "../lib/dates";
+
+interface Props {
+  due: Date;
+  weight?: number;
+  /** The teaching week the piece is set in, so the span is visible. */
+  set?: number;
+}
+
+const { due, weight, set } = Astro.props;
+const iso = due.toISOString();
+---
+
+<dl class="facts">
+  <div>
+    <dt>Due</dt>
+    <dd>
+      <time datetime={iso}>{formatCourseDate(due)}</time>
+      <span class="facts-time">, 5pm</span>
+    </dd>
+  </div>
+  {
+    weight != null && (
+      <div>
+        <dt>Weight</dt>
+        <dd>{weight}% of the course</dd>
+      </div>
+    )
+  }
+  {
+    set != null && (
+      <div>
+        <dt>Set in</dt>
+        <dd>week {set}</dd>
+      </div>
+    )
+  }
+  <div class="facts-countdown" data-due={iso} hidden>
+    <dt>From today</dt>
+    <dd></dd>
+  </div>
+</dl>
+
+<script>
+  // Filled in on the client so it cannot go stale between build and reading.
+  const MS_PER_DAY = 86_400_000;
+
+  const phrase = (days: number): string => {
+    if (days < 0) return "closed";
+    if (days === 0) return "due today";
+    if (days === 1) return "tomorrow";
+    if (days < 21) return `${days} days`;
+    return `${Math.round(days / 7)} weeks`;
+  };
+
+  for (const cell of document.querySelectorAll<HTMLElement>(".facts-countdown")) {
+    const due = Date.parse(cell.dataset.due ?? "");
+    if (Number.isNaN(due)) continue;
+    const value = cell.querySelector("dd");
+    if (!value) continue;
+    value.textContent = phrase(Math.round((due - Date.now()) / MS_PER_DAY));
+    cell.hidden = false;
+  }
+</script>
+
+<style>
+  /* Brand tokens only, so the block follows the palette into dark mode. */
+  .facts {
+    display: grid;
+    gap: 1px;
+    margin-block: 1.5rem 2rem;
+    padding: 0;
+    background: var(--at-divider, currentColor);
+    border: 1px solid var(--at-divider, currentColor);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* The countdown cell only appears if scripting filled it, so the row has to
+     sit correctly at three across as well as four. */
+  @media (min-width: 45rem) {
+    .facts {
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    }
+  }
+
+  .facts > div {
+    padding: 0.7rem 0.9rem;
+    background: var(--at-bg, transparent);
+  }
+
+  .facts dt {
+    margin: 0 0 0.15rem;
+    font-size: var(--at-font-size-xs, 0.75rem);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .facts dd {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .facts-time {
+    opacity: 0.7;
+  }
+</style>
