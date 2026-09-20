@@ -24,8 +24,8 @@ related:
   - sessions/10-teaching-it-to-someone
 ---
 
-*The 13th Warrior* is not a good film, and it contains a sequence better than
-anything else on this reading list. Ahmed, an Arab envoy travelling with a band
+*The 13th Warrior* contains one sequence that shows language acquisition more
+accurately than anything else on this list. Ahmed, an Arab envoy travelling with a band
 of Norsemen, sits at the fire night after night understanding nothing. The
 camera returns to him across successive evenings. The Norse dialogue gradually
 acquires English words at the edges, then in the middle, then entirely — and the
@@ -47,12 +47,12 @@ domains and faster in others.
 
 This matters to you for a practical reason. In week twelve somebody who has
 never seen your language will have to read a sentence of it aloud from your
-orthography. If nothing about your language is learnable from exposure, you will
-find that out in front of an audience.
+orthography. If nothing about your language can be worked out from exposure to
+it, that is where you will find out.
 
 ## Outline
 
 - the campfire sequence, and what it gets right about acquisition
 - comprehensible input, and why immersion on its own is not magic
 - the critical period — what the evidence supports and what it does not
-- designing something a stranger can get a foothold in
+- designing a language a stranger can begin to work out

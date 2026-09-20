@@ -26,16 +26,16 @@ related:
 
 The heptapods in *Arrival* produce something the linguists cannot map onto a
 human vocal tract, which is the film being honest about a real problem: the
-sounds available to a speaker are a fact about that speaker's body, not a menu.
-Louise's team records, segments, and fails, and the failure is the interesting
-part.
+sounds available to a speaker are determined by that speaker's body. Louise's
+team records the sounds and tries to segment them, and cannot. That failure is
+what makes the sequence useful to us.
 
 A phoneme is not a sound. It is a distinction your speakers treat as meaningful
 — a category that separates one word from another. English speakers hear the
 first sounds of *pin* and *spin* as the same thing and they are acoustically
 quite different; a language elsewhere would treat that difference as the whole
 point. So the question is never "which sounds does my language have," it is
-"which differences does my language care about."
+"which differences does my language treat as meaningful."
 
 Inventories vary enormously. Rotokas manages with around eleven phonemes.
 Several Khoisan languages run past a hundred, most of the extra ones clicks.
@@ -45,7 +45,7 @@ the rest of the semester.
 
 ## Outline
 
-- phonemes against sounds, and why the difference is the whole discipline
+- phonemes against sounds, and why the difference matters
 - reading the IPA consonant and vowel charts without memorising them
 - inventory size, from Rotokas at one end to the click languages at the other
-- picking yours, and what you have quietly signed up for by picking it
+- picking yours, and what that commits you to in later weeks

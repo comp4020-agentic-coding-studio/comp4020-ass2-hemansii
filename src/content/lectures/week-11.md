@@ -41,21 +41,21 @@ works perfectly. It renders every word correctly and conveys nothing, and the
 crew spends the episode unable to communicate with people whose language they
 can already translate.
 
-This is the sharpest illustration in screen fiction of the thing semantics does
-not cover. Meaning is not only in the words. Grice's account, still the standard
+The episode is a clear illustration of what semantics on its own does not
+cover. Meaning is not only in the words. Grice's account, still the standard
 one, is that conversation runs on an assumption of cooperation, and that
 speakers exploit it constantly by saying less than they mean and trusting the
 listener to infer the rest. "Some of the students passed" implies that not all
 did, although it does not say so and would not be false if all had.
 
-Every language leaks meaning this way, and none of it is in the grammar. Deixis
+Every language carries meaning this way, and none of it is stated in the grammar. Deixis
 — *here*, *now*, *this one* — has no fixed referent at all and depends entirely
 on who is speaking and where they are standing. Speech acts do things rather
 than describe them: naming a ship, making a promise, conceding a point.
 
 So the question for your language is not what it can say. You have spent nine
-weeks on that. It is what your speakers never bother to say, because everyone
-already knows it — which is a question about their society, and it is the last
+weeks on that. It is what your speakers leave unsaid, because everyone already
+knows it — which is a question about their society, and it is the last
 piece your language needs before somebody else has to read it aloud.
 
 ## Outline

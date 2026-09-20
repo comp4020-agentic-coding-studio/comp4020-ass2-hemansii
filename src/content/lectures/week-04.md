@@ -49,18 +49,18 @@ one. Which brings us to word order, the decision that constrains the most.
 There are six logically possible orders of subject, object and verb. Two of them
 — subject-object-verb and subject-verb-object — account for the great majority
 of the world's languages. Verb-initial orders are a respectable minority.
-Object-initial orders are vanishingly rare, which is precisely why Okrand gave
-Klingon one. And Greenberg's insight, still the most useful thing in typology,
-is that these choices travel in packages: knowing where a language puts its
+Object-initial orders are extremely rare, which is why Okrand gave Klingon
+one. Greenberg's observation, still one of the most useful results in typology,
+is that these choices come in packages: knowing where a language puts its
 verb lets you predict, well above chance, where it puts its adpositions, its
 relative clauses and its adjectives.
 
-You can ignore those correlations. Natural languages sometimes do. But ignoring
-them is a decision you should make on purpose rather than discover in week ten.
+You can ignore those correlations. Natural languages sometimes do. But that
+should be a deliberate choice, made now rather than noticed in week ten.
 
 ## Outline
 
 - the six orders, and why two of them do most of the work
 - Greenberg's correlations: what your verb position predicts about everything else
 - Peterson, thirty-odd words of Dothraki, and building outward from fixed data
-- fixing your order, then living inside what it implies
+- fixing your order, and working within what it implies

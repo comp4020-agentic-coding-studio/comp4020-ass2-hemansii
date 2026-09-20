@@ -37,17 +37,17 @@ for, so letters that look similar represent sounds that are articulated
 similarly. A script where the graphic form encodes phonetic features is called
 featural, and there is exactly one famous real-world example, Hangul, designed
 in fifteenth-century Korea for essentially the reason Tolkien's in-world account
-gives for Tengwar: somebody sat down and did it on purpose.
+gives for Tengwar: it was designed deliberately rather than inherited.
 
-Most scripts were not designed. They accreted, and the accidents show. An
+Most scripts were not designed. They developed gradually, and it shows. An
 alphabet gives you roughly one symbol per phoneme. An abjad writes the
 consonants and lets you infer the vowels, which is efficient in a language where
 the consonants carry the root. An abugida hangs vowel marks off consonant
 letters. A syllabary gives each syllable its own symbol, which is fine if your
 phonotactics are simple and unusable if they are not — which is why your week
-five formula constrains your week eight choice more than you would like.
+five syllable formula limits what you can choose this week.
 
-And the physical matters. Cuneiform looks like that because of what a reed does
+The physical medium matters too. Cuneiform looks like that because of what a reed does
 to wet clay. Letterforms that are quick to carve are not the ones that are quick
 to write with a brush. Decide what your speakers wrote on before you decide what
 their letters look like.

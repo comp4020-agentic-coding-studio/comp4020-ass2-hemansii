@@ -34,12 +34,13 @@ of what the novels had already fixed.
 
 Borrowing at that scale raises a question this course should not skip, so we
 will spend twenty minutes on it. There is a real difference between drawing on a
-language you have studied and know something about, and lifting a set of exotic
-syllables because they sound suitably foreign. The first is how languages have
+language you have studied and know something about, and taking syllables from
+a language you know nothing about because they sound foreign. The first is how
+languages have
 always worked. The second is a habit worth being conscious of, and you will be
 asked in the portfolio to write down what you took and where from.
 
-The mechanics are simpler than the ethics. Every language has a core vocabulary
+The practical side is more straightforward. Every language has a core vocabulary
 that gets used constantly and resists borrowing — kinship, body parts, small
 numbers, the basic verbs. Build that first, from your own roots. Then build
 derivation: rules that make new words out of old ones. Two hundred roots and six
@@ -50,6 +51,6 @@ consistent.
 ## Outline
 
 - core vocabulary: what every attested language turns out to have words for
-- derivation, compounding, and getting a lexicon that generates itself
+- derivation, compounding, and a lexicon that grows from its own roots
 - Herbert's Arabic, and the line between drawing on and taking from
 - what to write down about your own borrowings, and why the portfolio asks

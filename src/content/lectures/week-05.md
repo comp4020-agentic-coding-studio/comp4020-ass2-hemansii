@@ -25,7 +25,7 @@ related:
 Paul Frommer, a linguist at USC, built Na'vi for *Avatar* under a constraint
 Tolkien never had: working actors would need to speak it on set, from memory,
 convincingly, having learned it alongside everything else the production wanted
-from them. A language nobody can pronounce under pressure is a failed design,
+from them. A language nobody can pronounce under pressure does not work,
 however elegant it looks written down.
 
 His solution was not to make it easy. Na'vi includes ejectives — consonants made
@@ -33,16 +33,16 @@ by closing the glottis and compressing air in the mouth rather than pushing it
 from the lungs — which do not occur in English and which English speakers find
 genuinely difficult. What Frommer did instead was make it *systematic*. The
 sounds are unfamiliar but the rules governing where they can appear are tight
-and few, so once an actor internalises the pattern, new words fall into place
-rather than needing to be memorised one at a time.
+and few, so once an actor has learned the pattern, new words follow it rather
+than having to be memorised one at a time.
 
 That is phonotactics: not which sounds you have, which you fixed in week two,
 but which sequences of them your language permits. Every language has these
 rules and native speakers enforce them without knowing they exist. English
 speakers reject *ngip* as a possible English word without being able to say why,
 and *blick* as a plausible one that merely happens not to exist. You are writing
-that intuition down explicitly this week, because your speakers cannot do it for
-you.
+that intuition down explicitly this week, because you have no native speakers
+to supply it.
 
 ## Outline
 
