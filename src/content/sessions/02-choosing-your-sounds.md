@@ -2,7 +2,7 @@
 title: Choosing your sounds
 description:
   The workshop where your language stops being an idea — you fix an inventory in
-  IPA and then have to pronounce all of it, out loud, in front of people
+  IPA, then pronounce every sound in it to the group
 week: 2
 date: 2027-03-04
 teachers:
@@ -15,7 +15,7 @@ spec:
 
 ## Before the session
 
-Watch *Arrival*. Print an IPA chart — a real one, on paper. Laptops are fine for
+Watch *Arrival*. Print an IPA chart and bring it with you. Laptops are fine for
 everything else in this course and useless for this, because you will be
 pointing at symbols while somebody else makes the noise.
 

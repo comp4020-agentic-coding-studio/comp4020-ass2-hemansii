@@ -2,7 +2,7 @@
 title: What goes without saying
 description:
   The last building workshop. Context-dependent meaning, one thing your language
-  genuinely cannot express, and the first read-through of your crit text
+  cannot express without a paraphrase, and the first read-through of your crit text
 week: 11
 date: 2027-05-06
 teachers:

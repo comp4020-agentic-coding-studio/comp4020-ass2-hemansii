@@ -1,8 +1,8 @@
 ---
 title: Writing it down
 description:
-  You design a script and then test it the only way that matters — by writing
-  the same sentence three times, by hand, at speed
+  You design a script and then test it by hand — writing the same sentence
+  three times, at speed
 week: 8
 date: 2027-04-15
 teachers:

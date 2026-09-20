@@ -1,8 +1,8 @@
 ---
 title: Ordering the sentence
 description:
-  Fix your word order, then find out what it costs — questions, negation, and
-  the first sentence of your language that anybody can read
+  Fix your word order, then work out what follows from it — questions,
+  negation, and the first sentence of your language anybody can read
 week: 4
 date: 2027-03-18
 teachers:

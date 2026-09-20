@@ -2,7 +2,7 @@
 title: What your actors can say
 description:
   You write your syllable structure as a formula, then read twenty of your own
-  words aloud and repair every one you cannot say the same way twice
+  words aloud and fix any you cannot pronounce consistently
 week: 5
 date: 2027-03-25
 teachers:

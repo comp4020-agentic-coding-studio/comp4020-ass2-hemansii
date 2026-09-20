@@ -2,7 +2,7 @@
 title: The design brief
 description:
   The first workshop — you leave with one page describing a language that does
-  not exist yet, and at least one constraint you cannot talk your way out of
+  not exist yet, and at least one fixed constraint to design around
 week: 1
 date: 2027-02-25
 teachers:

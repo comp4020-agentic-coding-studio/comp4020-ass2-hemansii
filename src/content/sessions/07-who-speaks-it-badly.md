@@ -1,8 +1,8 @@
 ---
 title: Who speaks it badly
 description:
-  Your language acquires a second register and a population of imperfect
-  speakers, which is the point at which it starts to feel inhabited
+  Your language gains a second register and a population of imperfect speakers,
+  so that it reads as a language people actually use
 week: 7
 date: 2027-04-08
 teachers:
