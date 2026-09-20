@@ -1,10 +1,11 @@
 ---
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
-import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import BaseLayout from "astro-theme-university/layouts/BaseLayout.astro";
 import { withBase } from "astro-theme-university/url";
 import "../styles/hero.css";
 import CourseSpine from "../components/CourseSpine.astro";
+import HomeHero from "../components/HomeHero.astro";
 import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
@@ -16,13 +17,20 @@ import { sessionLabels, siteConfig } from "../site-config";
 // function, so the writing up there is this course's script and not a texture.
 ---
 
-<ContentLayout
+<BaseLayout
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
-  heroImage={heroImage}
-  heroImageAlt="A wide band of vertical bars in black and gold on warm cream, rising and falling across the page like the waveform of a sentence being spoken"
   {...siteConfig}
 >
+  <HomeHero
+    slot="hero"
+    code={courseMeta.code}
+    title={courseMeta.title}
+    image={heroImage}
+    imageAlt="A wide band of vertical bars in black and gold on warm cream, rising and falling across the page like the waveform of a sentence being spoken"
+  />
+
+  <p class="lead">{courseMeta.description}</p>
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
@@ -90,7 +98,7 @@ import { sessionLabels, siteConfig } from "../site-config";
       <p>Who teaches the course and how to reach them.</p>
     </Card>
   </CardGrid>
-</ContentLayout>
+</BaseLayout>
 
 <style>
   .hero-note {

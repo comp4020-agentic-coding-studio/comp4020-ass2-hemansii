@@ -1,0 +1,84 @@
+---
+// The home hero, which the theme's own Hero cannot render.
+//
+// Hero takes its title as a plain string and prints it into one h1, so
+// "SLOP4022: Nobody Speaks This Yet" arrives as a single run of type at a
+// single size. The code and the name are not the same kind of thing — one is a
+// catalogue number, the other is the course — and setting them identically
+// makes the h1 open on the least interesting half of itself. This renders the
+// same markup the theme does, with the code as its own line above the name.
+//
+// Section pages keep the theme's Hero: their titles are one word.
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  /** The catalogue code, set above the name and smaller. */
+  code: string;
+  /** The course name, which is what the h1 is actually announcing. */
+  title: string;
+  image: ImageMetadata;
+  imageAlt: string;
+}
+
+const { code, title, image, imageAlt } = Astro.props;
+---
+
+<section class="at-hero home-hero" aria-label={`${code}: ${title}`}>
+  <Image
+    src={image}
+    alt={imageAlt}
+    widths={[768, 1536, 2560]}
+    sizes="100vw"
+    width={2560}
+    loading="eager"
+    fetchpriority="high"
+    class="at-hero-image"
+  />
+  <div class="at-hero-content">
+    <h1 class="at-hero-title">
+      <span class="home-hero-code">{code}</span>
+      <span class="home-hero-name">{title}</span>
+    </h1>
+  </div>
+</section>
+
+<style>
+  /*
+   * The waveform runs edge to edge at full strength, which is right at the top
+   * of the band and wrong underneath type: the bars are the same near-black the
+   * title is, so the descenders land on them. The section banners have
+   * foreground drawing to hold the title clear of; this one has none, so the
+   * wash under the title is heavier here than the shared one in hero.css, and
+   * still gone by two thirds up.
+   */
+  .home-hero .at-hero-content {
+    background: linear-gradient(
+      to top,
+      rgb(242 236 224 / 96%),
+      rgb(242 236 224 / 94%) 34%,
+      rgb(242 236 224 / 52%) 52%,
+      rgb(242 236 224 / 0%) 72%
+    );
+  }
+
+  /* Off the floor of the band: the artwork reads as a band the title sits on
+     rather than a strip behind it, and the bars below stay visible. */
+  .home-hero .at-hero-title {
+    padding-block: var(--at-spacing-2xl) var(--at-spacing-2xl);
+  }
+
+  .home-hero-code {
+    display: block;
+    margin-block-end: 0.35em;
+    font-size: clamp(0.95rem, 1.5vw, 1.45rem);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    opacity: 0.72;
+  }
+
+  .home-hero-name {
+    display: block;
+  }
+</style>
