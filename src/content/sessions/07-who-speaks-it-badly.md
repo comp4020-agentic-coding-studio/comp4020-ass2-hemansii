@@ -16,8 +16,7 @@ spec:
 ## Before the session
 
 Watch *Blade Runner*. The Cityspeak arrives early and is not subtitled; that is
-deliberate, and you should sit with not understanding it rather than looking it
-up beforehand.
+deliberate, so watch it without looking up a translation first.
 
 ## In the session
 
@@ -30,8 +29,9 @@ unrelated languages.
 Then errors. You decide who learns your language as an adult and what they
 reliably get wrong — the sound they substitute, the ending they forget, the
 construction they calque from their own grammar. This is more revealing than it
-sounds. The errors a language attracts are a description of its difficulty from
-the outside, and you have been building it from the inside for six weeks.
+sounds: the errors learners make describe what is difficult about your language
+from the outside, and you have been working on it from the inside for six
+weeks.
 
 ## Afterwards
 

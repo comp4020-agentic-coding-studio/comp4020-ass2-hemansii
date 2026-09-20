@@ -30,14 +30,14 @@ descriptions are not accepted; they are always vaguer than their author thinks.
 
 Then reading aloud, in threes. One person reads, one listens, one writes down
 what they heard in IPA. The gap between what you meant and what the third person
-transcribed is the entire point of the exercise, and it is usually wider than
+transcribed is what the exercise is for, and it is usually wider than
 anybody expects.
 
 ## Afterwards
 
-Some of your words will not survive this. Words you liked will turn out to be
-unsayable, or sayable only slowly, or indistinguishable from a different word
-when spoken at normal speed.
+Some of your words will not come through this intact. Words you liked will turn
+out to be unsayable, or sayable only slowly, or indistinguishable from another
+word at normal speed.
 
-Cut them. This is the cheapest week in the semester to lose vocabulary, and the
-alternative is standing up in week twelve with a text you cannot read.
+Cut them. This is the easiest point in the semester to lose vocabulary, and the
+alternative is reading a text in week twelve that you cannot get through.

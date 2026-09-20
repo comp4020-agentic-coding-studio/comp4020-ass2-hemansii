@@ -21,16 +21,16 @@ you think you need.
 
 ## In the session
 
-An hour of design, working from your phonology outward rather than from
-aesthetics inward. It is tempting to draw beautiful glyphs and then work out
+An hour of design, starting from your phonology rather than from the look of
+the letters. It is tempting to draw attractive glyphs and then work out
 what they stand for; everybody who does this ends up with a script that cannot
 write their own language.
 
-Then the speed test, which is the actual content of the session. You write one
-sentence three times, fast, and compare the three. Letters that are
-distinguishable when drawn carefully and identical when written quickly are a
-design fault, not a charming quirk — real scripts either eliminate those pairs
-or evolve a cursive form that keeps them apart. You will find at least one.
+Then the speed test, which is the main work of the session. You write one
+sentence three times, fast, and compare the three. Letters that are distinct
+when drawn carefully and identical when written quickly are a design fault —
+real scripts either remove those pairs or develop a cursive form that keeps
+them apart. You will find at least one.
 
 ## Afterwards
 

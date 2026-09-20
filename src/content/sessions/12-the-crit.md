@@ -36,7 +36,7 @@ errors are ones your language could have prevented.
 Submit the language itself by the following Friday — the full description, the
 lexicon, the script, and the text with an interlinear gloss. The crit is marked
 inside that submission rather than separately, so what you are handing in is the
-thing plus the evidence that it worked in a room.
+language itself, together with the evidence that it worked when used.
 
-Then it is yours. Nobody else will ever speak it, which was true in February and
-is a different kind of true now.
+After that it is yours. Nobody else speaks it, which was true in February and
+means something rather different now.

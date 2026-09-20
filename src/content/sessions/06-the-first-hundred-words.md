@@ -16,9 +16,8 @@ spec:
 ## Before the session
 
 Watch *Dune*. Bring everything you have: inventory, morphology, syllable
-formula, existing words. Today is the first session where the earlier weeks all
-have to work at once, and if one of them is unfinished you will find out within
-the hour.
+formula, existing words. This is the first session where the earlier weeks all
+have to work together, so any unfinished piece will show up quickly.
 
 ## In the session
 
@@ -28,12 +27,13 @@ from your own roots, by hand, checking each against your phonotactics as you go.
 
 Halfway through we stop inventing and start deriving. You write six rules that
 make new words from existing ones, then apply them, and the last stretch of the
-session is mostly mechanical: the rules produce words faster than you can think
-of them, which is the point.
+session is mostly mechanical: once the rules are working they generate words
+much faster than inventing them one at a time, which is the point.
 
 Keep a borrowing column. Every time you take something from a real language,
 note which one. Nobody is going to object to your borrowing; you are going to be
-asked what you borrowed, and "I don't remember" is a bad answer in a crit.
+asked what you borrowed, and "I don't remember" will not be an adequate
+answer.
 
 ## Afterwards
 

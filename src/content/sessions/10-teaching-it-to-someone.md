@@ -16,8 +16,8 @@ spec:
 ## Before the session
 
 Watch *The 13th Warrior*. Then find somebody who is not in this course — a
-housemate, a sibling, whoever will sit still for fifteen minutes — and teach
-them five words and one sentence pattern.
+housemate, a sibling, anyone who can spare fifteen minutes — and teach them five
+words and one sentence pattern.
 
 Do not explain your grammar to them. Show them examples and let them infer.
 
@@ -37,6 +37,6 @@ Bring your essay draft if you want it read; there is time at the end.
 
 ## Afterwards
 
-Your language has now been tested by somebody with no investment in it
-succeeding. That is the only kind of test that counts, and it is a reasonable
-rehearsal for week twelve, where the person doing it will be a marker.
+Your language has now been tested by somebody with no stake in it working. That
+is the test that matters, and it is a reasonable rehearsal for week twelve,
+where the person doing it will be a marker.

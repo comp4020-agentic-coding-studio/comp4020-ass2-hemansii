@@ -16,8 +16,8 @@ spec:
 ## Before the session
 
 Watch *Arrival*. Print an IPA chart and bring it with you. Laptops are fine for
-everything else in this course and useless for this, because you will be
-pointing at symbols while somebody else makes the noise.
+everything else in this course and unhelpful here, because you will be pointing
+at symbols while somebody else makes the sound.
 
 ## In the session
 
@@ -25,11 +25,11 @@ We start with forty minutes of the chart itself, in pairs, working across the
 consonants by place and manner until the grid stops looking arbitrary. Then you
 draft your inventory.
 
-The last twenty minutes are the part people dread. You will be asked, without
-notice, to produce any phoneme on your own list. This is not a test of
-performance. It is how you find out that you have included a sound you cannot
-actually make, which roughly half of you will have done, and it is much cheaper
-to discover it now than in week twelve with an audience.
+In the last twenty minutes you will be asked, without notice, to produce any
+phoneme on your own list. This is not a test of performance. It is how you find
+out whether you have included a sound you cannot actually make, which roughly
+half of you will have done, and it is far easier to fix now than in week
+twelve.
 
 ## Afterwards
 

@@ -17,18 +17,18 @@ spec:
 ## Before the session
 
 Watch *The Fellowship of the Ring*. Bring one page. It does not need to be good
-and it will not be marked, but it has to exist on paper before you arrive —
-people who plan to write it in the room write nothing.
+and it will not be marked, but it has to exist on paper before you arrive.
+Students who plan to write it during the session generally do not write it.
 
 ## In the session
 
 Twenty minutes on the four questions, working alone. Then pairs: you read your
-partner's brief aloud while they listen to it in someone else's mouth, which is
-the fastest way to hear what you have not decided. The last half hour is for
-constraints. We go round the room and each of you names one thing your speakers
-physically cannot do, and the rest of us try to break it.
+partner's brief aloud while they listen, which is the fastest way to hear what
+you have not yet decided. The last half hour is for constraints. We go round the
+room, each of you names one thing your speakers physically cannot do, and the
+rest of us look for ways around it.
 
-Bring the constraint you like least. That is usually the productive one.
+Bring the constraint you find most awkward. It is usually the productive one.
 
 ## Afterwards
 
