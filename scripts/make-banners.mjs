@@ -99,7 +99,7 @@ function paperSteps({ data, info }) {
 const BANNERS = [
   ["lectures", "banner-lectures", 170, 470, [205, 146], 0],
   ["workshops", "banner-workshops", 50, 520, [0, 0], 0],
-  ["screenings", "banner-screenings", 55, 505, [70, 91], -190],
+  ["screenings", "banner-screenings", 120, 648, [98, 88], -160],
   ["assessment", "banner-assessment", 60, 520, [0, 0], 0],
   ["people", "banner-people", 105, 500, [0, 0], 0],
   ["policies", "banner-policies", 100, 490, [0, 0], 0],
