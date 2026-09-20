@@ -4,21 +4,41 @@
  * The theme scrims a hero with 60-80% pure black so white title text stays
  * legible. That is right for a photograph and wrong for two-ink artwork on
  * cream: it turns the gold grey and every section opens on a smudge. So the
- * scrim inverts — near-solid cream under the title, falling away above it —
- * and the title goes near-black, which reads at roughly 15:1 rather than the
- * 5-9:1 white-on-grey managed.
+ * scrim inverts — cream under the title, falling away above it — and the title
+ * goes near-black, which reads at roughly 15:1 rather than the 5-9:1
+ * white-on-grey managed.
  *
  * It lives in its own file because the pages that need it arrive through two
  * different layouts: PageLayout for the Markdown pages, ContentLayout direct
  * for the three that are .astro.
  */
+
+/*
+ * The theme's 20rem band is a 5.3:1 slot on a desktop, which is a letterbox.
+ * The section banners are drawings of rooms with people in them, and at that
+ * aspect a crop that keeps the faces keeps nothing else. 26rem is still a band
+ * rather than a panel, and it is the height the artwork in
+ * scripts/make-banners.mjs is cut to. A phone keeps the shorter one: there the
+ * band is already a fifth of the viewport.
+ */
+@media (min-width: 45rem) {
+  .at-hero {
+    min-height: 26rem;
+  }
+}
+
+/*
+ * The wash is heavy where the title sits — the bottom third — and gone by two
+ * thirds up, rather than fading the whole band. An earlier version held 88%
+ * cream through the lower half and the drawings arrived half-erased.
+ */
 .at-hero-content {
   background: linear-gradient(
     to top,
-    rgb(242 236 224 / 94%),
-    rgb(242 236 224 / 88%) 38%,
-    rgb(242 236 224 / 30%) 68%,
-    rgb(242 236 224 / 0%)
+    rgb(242 236 224 / 90%),
+    rgb(242 236 224 / 86%) 28%,
+    rgb(242 236 224 / 36%) 46%,
+    rgb(242 236 224 / 0%) 64%
   );
 }
 
@@ -26,5 +46,13 @@
   color: var(--at-black, #17130f);
   /* Sits low in the band, clear of the artwork above it. */
   padding-block: var(--at-spacing-2xl) var(--at-spacing-lg);
-  text-shadow: 0 1px 0 rgb(242 236 224 / 95%);
+
+  /* The scrim is lighter than it was, so each line carries its own paper:
+     a hairline for edge definition, then two soft halos. Over the darkest
+     thing any banner puts under the title — the cinema seats — near-black on
+     this still measures well past the 3:1 large text needs. */
+  text-shadow:
+    0 1px 0 rgb(242 236 224 / 95%),
+    0 0 10px rgb(242 236 224 / 95%),
+    0 0 34px rgb(242 236 224 / 85%);
 }
