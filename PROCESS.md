@@ -31,11 +31,12 @@ the tone, and never inventing a fact about a real film or language. `spec/` carr
 names a screening, no subsystem is taught twice, and week twelve has none
 ([`65d9416`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/65d9416)).
 
-Not everything belongs in a test. The voice rule stayed in `CLAUDE.md` as prose
-because no check can tell whether a sentence winks at the reader, and the same
-goes for whether a week reads as credible. What I would not leave to judgement
-was anything a marker would catch faster than I would: a week with no screening,
-a subsystem taught twice, a link that resolves nowhere.
+Some rules could not be automated. Whether the writing sounds right, or whether
+a week is convincing as university teaching, is a judgement I had to make
+myself, so those rules sit in `CLAUDE.md` as written guidance instead. Anything
+a program could check went into `spec/`: a week missing its screening, a topic
+taught twice, a link pointing nowhere. Those are the mistakes I would otherwise
+have missed.
 
 I built the base structure first — the home page and the sections: lectures,
 workshops, screenings, assessments, people, policies ([`9575206`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/9575206)).
