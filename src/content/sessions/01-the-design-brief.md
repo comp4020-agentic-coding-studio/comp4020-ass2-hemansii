@@ -23,16 +23,16 @@ Students who plan to write it during the session generally do not write it.
 ## In the session
 
 Twenty minutes on the four questions, working alone. Then pairs: you read your
-partner's brief aloud while they listen, which is the fastest way to hear what
+partner's brief aloud while they listen, which is a quick way to notice what
 you have not yet decided. The last half hour is for constraints. We go round the
 room, each of you names one thing your speakers physically cannot do, and the
 rest of us look for ways around it.
 
-Bring the constraint you find most awkward. It is usually the productive one.
+Bring the constraint you find most awkward. It is usually the most useful one.
 
 ## Afterwards
 
-Your brief is the document everything else answers to. When you cannot decide
+Your brief is the reference point for every later decision. When you cannot decide
 whether your language should mark plurals in week three, the brief is where you
 look, and if it does not answer, the brief is not finished.
 

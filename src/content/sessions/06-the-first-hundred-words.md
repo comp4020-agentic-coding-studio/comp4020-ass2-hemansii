@@ -17,7 +17,7 @@ spec:
 
 Watch *Dune*. Bring everything you have: inventory, morphology, syllable
 formula, existing words. This is the first session where the earlier weeks all
-have to work together, so any unfinished piece will show up quickly.
+have to work together, so anything left unfinished will become obvious.
 
 ## In the session
 
@@ -27,18 +27,17 @@ from your own roots, by hand, checking each against your phonotactics as you go.
 
 Halfway through we stop inventing and start deriving. You write six rules that
 make new words from existing ones, then apply them, and the last stretch of the
-session is mostly mechanical: once the rules are working they generate words
-much faster than inventing them one at a time, which is the point.
+session is mostly mechanical: once the rules are working, they generate words
+much faster than inventing them one at a time.
 
 Keep a borrowing column. Every time you take something from a real language,
 note which one. Nobody is going to object to your borrowing; you are going to be
-asked what you borrowed, and "I don't remember" will not be an adequate
-answer.
+asked what you borrowed, and "I don't remember" is not an adequate answer.
 
 ## Afterwards
 
-A hundred words is enough to write something short and not enough to write
-something good. That gap closes over the next four weeks.
+A hundred words is enough to write something short, but not yet enough to write
+well. That gap closes over the next four weeks.
 
 The Phonology and Grammar Portfolio is due this week. It wants the systems, not
 the word list — the inventory, the morphology, the syllable formula and the

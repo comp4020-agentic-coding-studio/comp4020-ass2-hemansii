@@ -16,7 +16,7 @@ spec:
 ## Before the session
 
 Watch *Arrival*. Print an IPA chart and bring it with you. Laptops are fine for
-everything else in this course and unhelpful here, because you will be pointing
+everything else in this course but not for this, because you will be pointing
 at symbols while somebody else makes the sound.
 
 ## In the session
@@ -28,8 +28,7 @@ draft your inventory.
 In the last twenty minutes you will be asked, without notice, to produce any
 phoneme on your own list. This is not a test of performance. It is how you find
 out whether you have included a sound you cannot actually make, which roughly
-half of you will have done, and it is far easier to fix now than in week
-twelve.
+half of you will have done. It is much easier to fix now than in week twelve.
 
 ## Afterwards
 
@@ -38,5 +37,5 @@ materials, and every word you invent for the rest of the semester has to be
 built out of them.
 
 If you want to change your inventory later you may, once, and you will have to
-rewrite everything you have already made from it. That is not a punishment; it
-is what changing a phonology costs.
+rewrite everything you have already made from it. That is not a penalty; it is
+simply what changing a phonology involves.

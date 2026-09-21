@@ -29,12 +29,12 @@ unrelated languages.
 Then errors. You decide who learns your language as an adult and what they
 reliably get wrong — the sound they substitute, the ending they forget, the
 construction they calque from their own grammar. This is more revealing than it
-sounds: the errors learners make describe what is difficult about your language
-from the outside, and you have been working on it from the inside for six
-weeks.
+sounds: the errors learners make show what is difficult about your language to
+someone encountering it for the first time, which is hard to judge after six
+weeks of working on it yourself.
 
 ## Afterwards
 
-A language with two registers has a society around it. Note who has authority
-over the prestige form, because in week eleven that will turn out to be the same
-question as who decides what goes without saying.
+A language with two registers implies a society. Note who decides which form
+counts as correct, because in week eleven that turns out to be the same question
+as who decides what can be left unsaid.

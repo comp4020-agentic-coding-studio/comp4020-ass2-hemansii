@@ -16,20 +16,20 @@ spec:
 
 ## Before the session
 
-Nothing to watch. Sleep, and read your text through twice.
+No screening this week. Rest, and read your text through twice.
 
 Bring three things: your text, your script legible on paper, and your week one
 design brief.
 
 ## In the session
 
-Fifteen minutes each. You read, a stranger reads a sentence back, and then the
-room asks questions until the time runs out.
+Fifteen minutes each. You read, a stranger reads a sentence back, and the room
+asks questions for the remaining time.
 
 The read-back is done by somebody from outside the course who has had no
 preparation and is given your writing alone — no gloss, no pronunciation guide,
-no help from you. They will get some of it wrong. What matters is whether the
-errors are ones your language could have prevented.
+no help from you. Some of it will be read incorrectly. What matters is whether
+those errors are ones your language could have prevented.
 
 ## Afterwards
 
@@ -38,5 +38,5 @@ lexicon, the script, and the text with an interlinear gloss. The crit is marked
 inside that submission rather than separately, so what you are handing in is the
 language itself, together with the evidence that it worked when used.
 
-After that it is yours. Nobody else speaks it, which was true in February and
-means something rather different now.
+After that the language is yours. Nobody else speaks it, which was also true in
+February, though it now describes something that exists.

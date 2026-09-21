@@ -16,8 +16,8 @@ spec:
 ## Before the session
 
 Watch *Star Trek VI*. Pay attention to the courtroom scenes specifically — not
-for the plot, but for how much grammatical work the subtitles are doing that the
-spoken Klingon is not.
+for the plot, but for how much grammatical work the subtitles are doing that
+the spoken Klingon is not doing.
 
 Bring your inventory from last week. You cannot do this session without it.
 
@@ -25,13 +25,13 @@ Bring your inventory from last week. You cannot do this session without it.
 
 We start with glossing. You will be given ten words in a language none of you
 have seen and asked to work out where the morpheme boundaries fall. It is slow
-at first and then becomes straightforward, and everything after it depends on
-your being able to do it.
+at first and then becomes straightforward, and the rest of the session depends
+on it.
 
 Then you choose your type and defend it in one sentence to the person next to
 you. Agglutinative is the easy choice and most of you will take it; that is
-fine, but choose it deliberately, because adding fusion in week six is much
-harder than choosing it now.
+fine, but choose it deliberately, because adding fusion later is much harder
+than choosing it now.
 
 The rest of the session is building. Ten words, from your own phonemes, obeying
 your own rules.
@@ -39,5 +39,5 @@ your own rules.
 ## Afterwards
 
 Write the rules down separately from the words. A list of ten words is a list of
-ten words. A rule that generates them is a language, and in week six you will
-need it to generate ninety more.
+ten words. A rule that generates them is a system, and in week six you will
+need it to produce ninety more.

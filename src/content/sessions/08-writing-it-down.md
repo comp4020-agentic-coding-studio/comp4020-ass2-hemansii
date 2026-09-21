@@ -21,12 +21,12 @@ you think you need.
 
 ## In the session
 
-An hour of design, starting from your phonology rather than from the look of
-the letters. It is tempting to draw attractive glyphs and then work out
+An hour of design, starting from your phonology rather than from how the
+letters look. It is tempting to draw attractive glyphs and then work out
 what they stand for; everybody who does this ends up with a script that cannot
 write their own language.
 
-Then the speed test, which is the main work of the session. You write one
+Then the speed test, which takes up most of the session. You write one
 sentence three times, fast, and compare the three. Letters that are distinct
 when drawn carefully and identical when written quickly are a design fault —
 real scripts either remove those pairs or develop a cursive form that keeps
@@ -34,9 +34,9 @@ them apart. You will find at least one.
 
 ## Afterwards
 
-You now have a language that can be spoken and written, which is more than most
-screen languages ever get.
+You now have a language that can be both spoken and written, which is further
+than most screen languages get.
 
-Next week the course stops building for a fortnight and starts arguing. Read the
+The next two weeks are given to the essay rather than to building. Read the
 essay brief before Monday; the film is one you have already seen, and you will
 be watching it differently.

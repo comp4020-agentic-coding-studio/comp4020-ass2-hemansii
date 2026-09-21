@@ -15,9 +15,9 @@ spec:
 
 ## Before the session
 
-Watch "Darmok". It is a single episode and the only television on this course,
-and it is here because it demonstrates the week's material more directly than
-any film would.
+Watch "Darmok". It is a single episode and the only television on this course;
+it is here because it illustrates the week's material more directly than any
+film does.
 
 Draft your crit text. Twelve lines minimum. It can be anything — a passage, a
 list, an argument, a set of instructions — provided it is a text your speakers
@@ -28,12 +28,12 @@ would plausibly produce rather than a demonstration of your grammar.
 Half the session on implicature. You write three utterances that mean something
 other than what they say, and state the context that makes each one work. This
 is much harder than it sounds, and it is the clearest way to tell whether you
-have built a society or only a grammar.
+have built a society as well as a grammar.
 
 Then the gap. Every language has something it expresses awkwardly — a
 distinction it cannot make without a long paraphrase. Find yours and write it
-down. Nobody is penalised
-for this; a language with no gaps is a language nobody has looked at closely.
+down. You are not penalised for this; every language examined closely enough
+turns out to have gaps.
 
 The last half hour is reading aloud, in pairs. First time out loud, in front of
 one person, with a week left to fix what you find.
@@ -41,5 +41,5 @@ one person, with a week left to fix what you find.
 ## Afterwards
 
 Fix what the read-through exposed. Do not add anything new — you are eight days
-from the crit, and at this stage adding material causes far more problems than
-refining what you have.
+from the crit, and at this stage new material causes more problems than it
+solves.
