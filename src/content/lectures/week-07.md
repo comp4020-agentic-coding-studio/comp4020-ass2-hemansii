@@ -47,7 +47,7 @@ who has to accommodate whom.
 That is what contact does to language. Where speakers of different languages
 need to trade, a pidgin appears: reduced, nobody's first language, adequate for
 the job. Where children grow up hearing that pidgin as their primary input, they
-do something extraordinary with it — they supply the grammar it lacked, and
+do something remarkable with it — they supply the grammar it lacked, and
 within a generation it is a creole, a full language with native speakers and
 everything a full language has.
 

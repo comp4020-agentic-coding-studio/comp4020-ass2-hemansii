@@ -39,12 +39,13 @@ featural, and there is exactly one famous real-world example, Hangul, designed
 in fifteenth-century Korea for essentially the reason Tolkien's in-world account
 gives for Tengwar: it was designed deliberately rather than inherited.
 
-Most scripts were not designed. They developed gradually, and it shows. An
+Most scripts were not designed. They developed over time, and their history is
+visible in them. An
 alphabet gives you roughly one symbol per phoneme. An abjad writes the
 consonants and lets you infer the vowels, which is efficient in a language where
 the consonants carry the root. An abugida hangs vowel marks off consonant
 letters. A syllabary gives each syllable its own symbol, which is fine if your
-phonotactics are simple and unusable if they are not — which is why your week
+phonotactics are simple and impractical if they are not — which is why your week
 five syllable formula limits what you can choose this week.
 
 The physical medium matters too. Cuneiform looks like that because of what a reed does

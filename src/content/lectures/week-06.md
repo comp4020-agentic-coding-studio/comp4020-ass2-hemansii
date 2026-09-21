@@ -50,7 +50,7 @@ consistent.
 
 ## Outline
 
-- core vocabulary: what every attested language turns out to have words for
+- core vocabulary: the concepts every documented language has words for
 - derivation, compounding, and a lexicon that grows from its own roots
 - Herbert's Arabic, and the line between drawing on and taking from
 - what to write down about your own borrowings, and why the portfolio asks

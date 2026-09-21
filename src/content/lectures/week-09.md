@@ -2,7 +2,7 @@
 title: Language and thought
 description:
   The film makes a strong claim about language and thought. The evidence
-  supports a much weaker version of it, which is the more interesting claim
+  supports a much weaker version of it, which is the more useful claim to examine
 week: 9
 date: 2027-04-19
 teachers:
@@ -54,6 +54,6 @@ the evidence departs from it.
 ## Outline
 
 - the claim the film makes, where it makes it, stated fairly
-- Whorf, what he wrote, and what got attached to his name afterwards
+- Whorf, what he wrote, and what was later attributed to him
 - the effects that replicate — colour boundaries, spatial frames, gender
 - how to argue with a film's claim without treating the film as a research paper

@@ -48,7 +48,7 @@ The alternative is fusion, where one ending carries several categories at once
 and cannot be cut apart — Latin's case endings, where a single vowel is doing
 number and case and gender simultaneously. Or isolation, where morphemes are
 not joined at all and word order and particles do that work instead. You are picking
-one of these on Thursday, and it determines how your language reads.
+one of these on Thursday, and it affects how your language reads on the page.
 
 ## Outline
 

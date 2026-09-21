@@ -51,12 +51,12 @@ There are six logically possible orders of subject, object and verb. Two of them
 of the world's languages. Verb-initial orders are a respectable minority.
 Object-initial orders are extremely rare, which is why Okrand gave Klingon
 one. Greenberg's observation, still one of the most useful results in typology,
-is that these choices come in packages: knowing where a language puts its
+is that these choices tend to occur together: knowing where a language puts its
 verb lets you predict, well above chance, where it puts its adpositions, its
 relative clauses and its adjectives.
 
 You can ignore those correlations. Natural languages sometimes do. But that
-should be a deliberate choice, made now rather than noticed in week ten.
+should be a deliberate choice, made now rather than discovered later.
 
 ## Outline
 

@@ -48,7 +48,7 @@ domains and faster in others.
 This matters to you for a practical reason. In week twelve somebody who has
 never seen your language will have to read a sentence of it aloud from your
 orthography. If nothing about your language can be worked out from exposure to
-it, that is where you will find out.
+it, the crit is where that will become apparent.
 
 ## Outline
 

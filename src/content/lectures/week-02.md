@@ -27,8 +27,8 @@ related:
 The heptapods in *Arrival* produce something the linguists cannot map onto a
 human vocal tract, which is the film being honest about a real problem: the
 sounds available to a speaker are determined by that speaker's body. Louise's
-team records the sounds and tries to segment them, and cannot. That failure is
-what makes the sequence useful to us.
+team records the sounds and tries to segment them, and cannot. That is a
+realistic depiction of the problem.
 
 A phoneme is not a sound. It is a distinction your speakers treat as meaningful
 — a category that separates one word from another. English speakers hear the
@@ -37,8 +37,8 @@ quite different; a language elsewhere would treat that difference as the whole
 point. So the question is never "which sounds does my language have," it is
 "which differences does my language treat as meaningful."
 
-Inventories vary enormously. Rotokas manages with around eleven phonemes.
-Several Khoisan languages run past a hundred, most of the extra ones clicks.
+Inventories vary enormously. Rotokas has around eleven phonemes. Several
+Khoisan languages have more than a hundred, most of the additional ones clicks.
 Neither is primitive and neither is advanced. What an inventory determines is
 what your words can possibly sound like, and you are choosing that this week for
 the rest of the semester.

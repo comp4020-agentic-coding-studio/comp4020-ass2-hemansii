@@ -40,7 +40,7 @@ anatomy and their history rule out. A species without lips cannot have /p/ or
 
 ## Outline
 
-- what Tolkien actually claimed, and why it sounds like the wrong way round
+- what Tolkien actually claimed, and why it sounds back to front
 - languages built before their worlds, and languages built to a deadline
 - the four questions a design brief has to answer
-- what constraints give you, and why you should set more than feels comfortable
+- what constraints give you, and why you want more of them than you might expect
