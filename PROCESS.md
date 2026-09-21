@@ -10,11 +10,10 @@ should have developed a language that has its own sounds, grammar, writing
 system and structure.
 
 The course started as a much looser idea around films. I wanted the assignment
-to be something I would actually find interesting, and I had been thinking about
-movies when I started brainstorming. I asked Claude for possible course ideas
+to be something I would find interesting, and I had been thinking about movies.
+I asked Claude for possible course ideas
 and explored topics such as time loops, the multiverse and orbital mechanics.
-The problem with those ideas was that they felt more like a collection of
-interesting discussions than a course.
+Those felt more like a collection of interesting discussions than a course.
 
 The constructed-language idea became stronger once I realised that it could have
 a clear final outcome: students would actually create something by the end of
@@ -34,8 +33,7 @@ the tone, and never inventing a fact about a real film or language. `spec/` carr
 names a screening, no subsystem is taught twice, and week twelve has none
 ([`65d9416`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/65d9416)).
 
-Rather than completing each week separately from the beginning, I first built
-the base course structure. This included the main course page and the different
+I built the base course structure first: the main course page and the
 sections such as lectures, workshops, screenings, assessments, people and
 policies ([`9575206`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/9575206)).
 
@@ -50,9 +48,8 @@ I also had to repeatedly adjust the tone of the writing. Claude sometimes
 produced content that was too vague, overly serious, or used unnecessarily
 complicated phrases. At other times, because the course was based around films,
 the writing became too playful and made the course feel less credible
-([`c4c8fe4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/c4c8fe4)). I had to guide it toward a middle ground
-where the course still felt creative but also believable as a final-year
-university course.
+([`c4c8fe4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/c4c8fe4)). I had to steer it toward something
+creative but still believable as a final-year course.
 
 The visual design became another part of the process. Claude was not producing
 useful illustrations for the course headers and mostly generated basic shapes or
@@ -62,11 +59,13 @@ each section ([`b55ff21`](https://github.com/comp4020-agentic-coding-studio/comp
 
 ## What I learned
 
-The main thing I learned was that using Claude effectively still requires a lot
-of judgement. It could generate the course content and suggest structures, but I
-still had to decide whether the course made sense, whether the weeks built on
-each other, whether the assessment structure was believable, and whether the
-writing matched the tone I wanted.
+What I learned was that the harness is what makes the judgement repeatable. I
+could not hold twelve weeks of decisions in my head, so the checks held them
+instead: the spec tests failed for four commits while I wrote the weeks, which
+meant the content was written against a specification rather than approved
+afterwards. What a test could not settle — whether a week read as credible,
+whether the tone was right — I checked by reading each page back as a
+student.
 
 If I started again, I would give Claude much clearer instructions earlier about
 tone, structure and the relationship between weeks. I would also establish the
