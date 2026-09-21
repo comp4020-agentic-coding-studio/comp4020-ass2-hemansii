@@ -25,36 +25,35 @@ as `requires:` edges and wrote a test that fails if every week depends only on
 the one before it — a straight line would mean I had not thought about it
 ([`711602e`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/711602e)).
 
-The decisions I most wanted to hold went into the harness rather than my
-memory. `CLAUDE.md` carries what only a person can judge —
-the tone, and never inventing a fact about a real film or language. `spec/` carries the ones a machine can settle: every teaching week
-names a screening, no subsystem is taught twice, and week twelve has none
+The decisions I most wanted to hold went into the harness rather than my memory.
+`CLAUDE.md` carries what only a person can judge: the tone, and never inventing
+a fact about a real film or language. `spec/` carries what a machine can settle
+— every teaching week names a screening, no subsystem is taught twice, week
+twelve has none
 ([`65d9416`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/65d9416)).
 
 Some rules could not be automated. Whether the writing sounds right, or whether
 a week is convincing as university teaching, is a judgement I had to make
-myself, so those rules sit in `CLAUDE.md` as written guidance instead. Anything
-a program could check went into `spec/`: a week missing its screening, a topic
-taught twice, a link pointing nowhere. Those are the mistakes I would otherwise
-have missed.
+myself, so those stayed in `CLAUDE.md` as written guidance. Anything a program
+could check went into `spec/` instead: a week missing its screening, a topic
+taught twice, a link pointing nowhere.
 
-I built the base structure first — the home page and the sections: lectures,
-workshops, screenings, assessments, people, policies ([`9575206`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/9575206)).
-
-That led to changes. Screenings had no section of their own, and students needed
-one place showing which film belonged to which week ([`39a1d89`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/39a1d89),
-[`65aa6ea`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/65aa6ea)). The assessment weightings and
-descriptions also needed rebalancing
+I built the base structure first, then read it back as a prospective student
+([`9575206`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/9575206)). That is what exposed the screenings problem:
+each film was named on its own week page, which works for someone already
+enrolled and not for someone deciding whether to enrol, since seeing the full
+list meant opening eleven pages. A separate section showed all eleven at once
+([`39a1d89`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/39a1d89), [`65aa6ea`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/65aa6ea)). The same
+read-through showed the assessment weightings were unbalanced
 ([`f6b1a31`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/f6b1a31), [`be7efd1`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/be7efd1)).
 
 Tone took the most iterations. Claude's drafts were either vague and
-over-serious or, because the course is built on films, playful enough to stop
-sounding like a real course ([`c4c8fe4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/c4c8fe4)). I had to steer it
+over-serious or, because the course is built on films, too playful to read as a
+real course ([`c4c8fe4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/c4c8fe4)). I had to steer it
 between the two.
 
-Claude's illustrations for the section headers were unusable — mostly basic
-shapes ([`0d635a8`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/0d635a8)) — so I generated them with Google Stitch
-instead, refining the prompts until the six matched
+Claude's illustrations for the headers were unusable ([`0d635a8`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/0d635a8)),
+so I made them in Google Stitch, refining the prompts until the six matched
 ([`b55ff21`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-hemansii/commit/b55ff21)).
 
 ## What I learned
@@ -67,6 +66,6 @@ afterwards. What a test could not settle — whether a week read as credible,
 whether the tone was right — I checked by reading each page back as a
 student.
 
-If I started again, I would give Claude clearer instructions earlier about tone
-and the relationship between weeks. I would also establish the
-visual direction sooner instead of trying to fix it near the end.
+If I started again, I would write the tone rules before the first week rather
+than after the fourth, and settle the visual direction early instead of near
+the end.
