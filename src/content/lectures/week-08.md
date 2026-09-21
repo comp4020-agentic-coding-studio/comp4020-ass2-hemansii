@@ -1,8 +1,8 @@
 ---
 title: Writing it down
 description:
-  Five ways to write a language, and what a script quietly reveals about who was
-  literate, what they wrote on, and how fast they were working
+  Five ways to write a language, and what a script tells you about who could
+  read it, what they wrote on, and how quickly they worked
 week: 8
 date: 2027-04-12
 teachers:

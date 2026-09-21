@@ -48,8 +48,8 @@ adjectives people reach for. These are real, replicated, and modest — language
 influences attention and habitual categorisation rather than determining the
 limits of thought.
 
-That is your essay: state the film's claim accurately, then set out precisely
-where the evidence departs from it.
+Your essay asks you to state the film's claim accurately, then set out where
+the evidence departs from it.
 
 ## Outline
 

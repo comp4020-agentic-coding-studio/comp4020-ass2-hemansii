@@ -2,7 +2,8 @@
 title: Which sounds can sit together
 description:
   Phonotactics — the rules about which sounds can follow which. Frommer built
-  Na'vi for actors who had to say it on camera, correctly, in a fortnight
+  Na'vi for actors who had to learn it quickly and pronounce it accurately on
+  camera
 week: 5
 date: 2027-03-22
 teachers:
@@ -25,8 +26,8 @@ related:
 Paul Frommer, a linguist at USC, built Na'vi for *Avatar* under a constraint
 Tolkien never had: working actors would need to speak it on set, from memory,
 convincingly, having learned it alongside everything else the production wanted
-from them. A language nobody can pronounce under pressure does not work,
-however elegant it looks written down.
+from them. A language the people speaking it cannot pronounce reliably is not
+usable, however elegant it looks written down.
 
 His solution was not to make it easy. Na'vi includes ejectives — consonants made
 by closing the glottis and compressing air in the mouth rather than pushing it
@@ -38,7 +39,7 @@ than having to be memorised one at a time.
 
 That is phonotactics: not which sounds you have, which you fixed in week two,
 but which sequences of them your language permits. Every language has these
-rules and native speakers enforce them without knowing they exist. English
+rules, and native speakers apply them without being aware of them. English
 speakers reject *ngip* as a possible English word without being able to say why,
 and *blick* as a plausible one that merely happens not to exist. You are writing
 that intuition down explicitly this week, because you have no native speakers

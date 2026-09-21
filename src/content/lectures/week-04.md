@@ -44,7 +44,7 @@ Valyrian.
 
 That is the ordinary condition of this work: you are always building outward
 from constraints somebody else set, including the ones you set yourself in week
-one. Which brings us to word order, the decision that constrains the most.
+one. Word order is the decision with the widest consequences.
 
 There are six logically possible orders of subject, object and verb. Two of them
 — subject-object-verb and subject-verb-object — account for the great majority

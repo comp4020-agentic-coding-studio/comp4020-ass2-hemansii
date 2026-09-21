@@ -34,8 +34,8 @@ languages. The slower one produces a language worth examining closely, and it
 is the method this course uses.
 
 So you do not begin with vocabulary. You begin with a brief: who speaks this,
-how many of them there are, what they use it for, and what their bodies and
-their history will not let them say. A species without lips cannot have /p/ or
+how many of them there are, what they use it for, and which sounds their
+anatomy and their history rule out. A species without lips cannot have /p/ or
 /b/, and that single fact will still be shaping your words in week eight.
 
 ## Outline
